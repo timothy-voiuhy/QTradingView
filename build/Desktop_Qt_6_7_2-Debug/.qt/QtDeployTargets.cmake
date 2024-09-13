@@ -1,0 +1,2 @@
+set(__QT_DEPLOY_TARGET_QTradingView_FILE /media/program/data_drive/MYAPPLICATIONS/QTradingView/build/Desktop_Qt_6_7_2-Debug/QTradingView)
+set(__QT_DEPLOY_TARGET_QTradingView_TYPE EXECUTABLE)

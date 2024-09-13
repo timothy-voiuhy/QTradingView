@@ -1,0 +1,10 @@
+/media/program/data_drive/MYAPPLICATIONS/QTradingView/build/Desktop_Qt_6_7_2-Debug/CMakeFiles/QTradingView.dir
+/media/program/data_drive/MYAPPLICATIONS/QTradingView/build/Desktop_Qt_6_7_2-Debug/CMakeFiles/QTradingView_qmlimportscan.dir
+/media/program/data_drive/MYAPPLICATIONS/QTradingView/build/Desktop_Qt_6_7_2-Debug/CMakeFiles/edit_cache.dir
+/media/program/data_drive/MYAPPLICATIONS/QTradingView/build/Desktop_Qt_6_7_2-Debug/CMakeFiles/rebuild_cache.dir
+/media/program/data_drive/MYAPPLICATIONS/QTradingView/build/Desktop_Qt_6_7_2-Debug/CMakeFiles/list_install_components.dir
+/media/program/data_drive/MYAPPLICATIONS/QTradingView/build/Desktop_Qt_6_7_2-Debug/CMakeFiles/install.dir
+/media/program/data_drive/MYAPPLICATIONS/QTradingView/build/Desktop_Qt_6_7_2-Debug/CMakeFiles/install/local.dir
+/media/program/data_drive/MYAPPLICATIONS/QTradingView/build/Desktop_Qt_6_7_2-Debug/CMakeFiles/install/strip.dir
+/media/program/data_drive/MYAPPLICATIONS/QTradingView/build/Desktop_Qt_6_7_2-Debug/CMakeFiles/QTradingView_autogen_timestamp_deps.dir
+/media/program/data_drive/MYAPPLICATIONS/QTradingView/build/Desktop_Qt_6_7_2-Debug/CMakeFiles/QTradingView_autogen.dir

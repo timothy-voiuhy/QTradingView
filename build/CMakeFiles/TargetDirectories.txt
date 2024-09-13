@@ -1,0 +1,10 @@
+/media/program/data_drive/MYAPPLICATIONS/QTradingView/build/CMakeFiles/QTradingView.dir
+/media/program/data_drive/MYAPPLICATIONS/QTradingView/build/CMakeFiles/QTradingView_qmlimportscan.dir
+/media/program/data_drive/MYAPPLICATIONS/QTradingView/build/CMakeFiles/edit_cache.dir
+/media/program/data_drive/MYAPPLICATIONS/QTradingView/build/CMakeFiles/rebuild_cache.dir
+/media/program/data_drive/MYAPPLICATIONS/QTradingView/build/CMakeFiles/list_install_components.dir
+/media/program/data_drive/MYAPPLICATIONS/QTradingView/build/CMakeFiles/install.dir
+/media/program/data_drive/MYAPPLICATIONS/QTradingView/build/CMakeFiles/install/local.dir
+/media/program/data_drive/MYAPPLICATIONS/QTradingView/build/CMakeFiles/install/strip.dir
+/media/program/data_drive/MYAPPLICATIONS/QTradingView/build/CMakeFiles/QTradingView_autogen_timestamp_deps.dir
+/media/program/data_drive/MYAPPLICATIONS/QTradingView/build/CMakeFiles/QTradingView_autogen.dir

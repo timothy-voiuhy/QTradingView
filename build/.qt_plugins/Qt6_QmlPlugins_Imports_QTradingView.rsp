@@ -1,0 +1,9 @@
+-rootPath
+/media/program/data_drive/MYAPPLICATIONS/QTradingView
+-cmake-output
+-output-file
+/media/program/data_drive/MYAPPLICATIONS/QTradingView/build/.qt_plugins/Qt6_QmlPlugins_Imports_QTradingView.cmake
+-importPath
+/media/program/data_drive/MYAPPLICATIONS/QTradingView/build
+-importPath
+/usr/lib/x86_64-linux-gnu/qt6/qml
