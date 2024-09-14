@@ -1,7 +1,7 @@
 #ifndef PATHGRAPHPOINT_H
 #define PATHGRAPHPOINT_H
 
-class pathGraphPoint : public QPoint{
+class pathGraphPoint : public QPointF{
 };
 
 #endif

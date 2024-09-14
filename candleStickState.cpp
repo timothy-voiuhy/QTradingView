@@ -86,6 +86,11 @@ int graphTimeFrameNodeState::getCurCandleStickBodyWidth() const {
     return curCandleStickBodyWidth;
 }
 
+int graphTimeFrameNodeState::getCurCandleStickBodyLength() const
+{
+    return curCandleStickBodyLength;
+}
+
 void graphTimeFrameNodeState::setId(int __id)
 {
     id = __id;

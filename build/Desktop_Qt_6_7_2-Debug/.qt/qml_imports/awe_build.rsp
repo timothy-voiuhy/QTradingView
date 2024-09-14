@@ -1,9 +1,0 @@
--rootPath
-/media/program/data_drive/MYAPPLICATIONS/QTradingView
--cmake-output
--output-file
-/media/program/data_drive/MYAPPLICATIONS/QTradingView/build/Desktop_Qt_6_7_2-Debug/.qt/qml_imports/awe_build.cmake
--importPath
-/media/program/data_drive/MYAPPLICATIONS/QTradingView/build/Desktop_Qt_6_7_2-Debug
--importPath
-/home/program/QtDesignStudio/6.7.2/gcc_64/./qml

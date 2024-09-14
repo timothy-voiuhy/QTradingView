@@ -1,0 +1,5 @@
+# Hashes of file build rules.
+98f598d802033aba189236b992843187 .qt_plugins/Qt6_QmlPlugins_Imports_QTradingView.cmake
+472bd54d32521e710ef24b675c086bae CMakeFiles/QTradingView_autogen
+472bd54d32521e710ef24b675c086bae CMakeFiles/QTradingView_qmlimportscan
+14da32c042c458efc23ebd48d4cabaab QTradingView_autogen/timestamp

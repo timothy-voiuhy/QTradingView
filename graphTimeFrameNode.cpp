@@ -7,14 +7,26 @@
 #include "pathGraphPoint.h"
 #include "candleStickWick.h"
 #include <QPoint>
+#include <QGraphicsSceneHoverEvent>
+#include <QGraphicsScene>
+#include <iostream>
+#include <QTextBrowser>
+#include <QFrame>
+#include <QGraphicsProxyWidget>
 
-graphTimeFrameNode::graphTimeFrameNode(QVector<double> &ohlcData, QDateTime &time_state, int id,  bool isDynamic, int nodewidth):
-ohlcData(ohlcData), node_time_state(time_state), isNodeDynamic(isDynamic), node_id(id), node_width(nodewidth)
+graphTimeFrameNode::graphTimeFrameNode(QVector<double> &ohlcData, QDateTime &time_state, int id, bool isDynamic, int nodewidth)
+    : ohlcData(ohlcData), node_time_state(time_state), isNodeDynamic(isDynamic), node_id(id), node_width(nodewidth)
 {
     // create the internal state of the node
+    pixelsPerPip = 4;
+    setScale();
+    setRange();
+    setNodeHeight();
     node_state = new graphTimeFrameNodeState();
     initializeState(); // initialize default values
     populateInternalState();
+
+    setAcceptHoverEvents(true);
 }
 
 graphTimeFrameNode::~graphTimeFrameNode()
@@ -37,7 +49,12 @@ QRectF graphTimeFrameNode::boundingRect() const
 
 void graphTimeFrameNode::paint(QPainter *painter, const QStyleOptionGraphicsItem *option, QWidget *widget)
 {
+    Q_UNUSED(option);
+    Q_UNUSED(widget);
 
+    // The candlestick is a child item, so it will be drawn automatically
+    // Draw the path_graph_point if needed
+    painter->drawPoint(path_graph_point->toPoint());
 }
 
 void graphTimeFrameNode::setgraphTimeFrameNodeState(graphTimeFrameNodeState *state) {
@@ -60,17 +77,20 @@ void graphTimeFrameNode::updateNodeGeometry(double current_price)
 }
 
 QPointF graphTimeFrameNode::valueToPosition(double value) {
-    // Calculate the difference in pips
-    int pipsDifference = static_cast<int>((ohlcData[1] - value) * 10000 + 0.5);
+    // Assuming prices are quoted to four decimal places (e.g., Forex)
+    const int PIPS_MULTIPLIER = 10000;
+
+    // Calculate the difference in pips from the high value
+    int pipsDifference = static_cast<int>((ohlcData[1] - value) * PIPS_MULTIPLIER + 0.5);
     
     // Convert pips to pixels
     double pixelDifference = pipsDifference * getPixelsPerPip();
     
     // Calculate the Y position (remember that screen coordinates increase downwards)
-    double y = boundingRect().top() + pixelDifference;
+    double y = pixelDifference; // Assuming top of the bounding rect is 0
     
     // X position remains at the center of the bounding rect
-    double x = boundingRect().center().x();
+    double x = node_width / 2; // Center of the node width
     
     return QPointF(x, y);
 }
@@ -81,7 +101,7 @@ void graphTimeFrameNode::setScale(){
 }
 
 void graphTimeFrameNode::setRange(){
-    range = ohlcData[1] - ohlcData[2];
+    range = std::abs(ohlcData[1] - ohlcData[2]);
 }
 
 double graphTimeFrameNode::getPixelsPerPip(){
@@ -97,10 +117,10 @@ void graphTimeFrameNode::setNodeHeight() {
 
     // Ensure a minimum size for very small ranges
     const double MIN_PIXELS_PER_PIP = 0.5;
-    pixelsPerPip = std::max(pixelsPerPip, MIN_PIXELS_PER_PIP);
+    double pixelsPerPip_ = std::max(pixelsPerPip, MIN_PIXELS_PER_PIP);
 
     // Calculate the node height
-    double height = rangePips * pixelsPerPip;
+    double height = rangePips * pixelsPerPip_;
 
     // Ensure the height doesn't exceed the maximum
     height = std::min(height, static_cast<double>(MAX_HEIGHT));
@@ -131,37 +151,39 @@ void graphTimeFrameNode::initializeState(){
             node_state->setCandleStickWickColor(Qt::green);
         }
         // depending on the range of the prices, the geometry relative to the group item is to be changed.
-        if(isNodeDynamic == false){
-            setNodeHeight();
-            // set the dimensions of the graphTimeFrameNode boundingRect
-            boundingRect().setWidth(node_width); // same as the candle body width
-            boundingRect().setHeight(node_height);
-            // set positions relative to the boundingRect
-            // the minus is to make sure the candles are not on one another
-            node_state->setCurCandleStickBodyWidth(node_width-2); // this is the same size as the boundingRect of both the candleStick item group and the graphTimeFrameNode group due to autoAdjustmet done by qt
+        // set the dimensions of the graphTimeFrameNode boundingRect
+        // boundingRect().setWidth(node_width); // same as the candle body width
+        // boundingRect().setHeight(node_height);
+        // set positions relative to the boundingRect
+        // the minus is to make sure the candles are not on one another
+        node_state->setCurCandleStickBodyWidth(node_width-2); // this is the same size as the boundingRect of both the candleStick item group and the graphTimeFrameNode group due to autoAdjustmet done by qt
 
-            // set the wick positions and in so doing setting the two bounding rectangles
-            node_state->setCurCandleStickWickStartPosition(QPointF(node_width/2, 0));
-            node_state->setPrevCandleStickWickStartPosition(QPointF(node_width/2, 0));
-            node_state->setCurCandleStickWickEndPosition(QPointF(node_width/2, node_height));
-            node_state->setPrevCandleStickWickEndPositon(QPointF(node_width/2, node_height));
+        // Calculate positions for the wicks and body
+        double highPosition = valueToPosition(ohlcData[1]).y();
+        double lowPosition = valueToPosition(ohlcData[2]).y();
+        double openPosition = valueToPosition(ohlcData[0]).y();
+        double closePosition = valueToPosition(ohlcData[3]).y();
 
-            // set the body top and bottom positions
-            double bodyTop = valueToPosition(ohlcData[3]).y();
-            double bodyBottom = valueToPosition(ohlcData[0]).y();
-            node_state->setCurCandleStickBodyTopPosition(QPointF(node_width/2, bodyTop));
-            node_state->setCurCandleStickBodyBottomPosition(QPointF(node_width/2, bodyBottom));
+        // set the wick positions and in so doing setting the two bounding rectangles
+        node_state->setCurCandleStickWickStartPosition(QPointF(node_width/2, highPosition));
+        node_state->setPrevCandleStickWickStartPosition(QPointF(node_width/2, highPosition));
+        node_state->setCurCandleStickWickEndPosition(QPointF(node_width/2, lowPosition));
+        node_state->setPrevCandleStickWickEndPositon(QPointF(node_width/2, lowPosition));
 
-            // set lengths
-            double bodyLength = std::abs(bodyTop - bodyBottom);
-            node_state->setCurCandleSickBodyLength(bodyLength);
-            node_state->setPrevCandleStickBodyLength(bodyLength);
-            node_state->setCurCandleStickWickLength(node_state->getCurCandleStickWickStartPosition().y() - node_state->getCurCandleStickWickEndPosition().y());
-            node_state->setPrevCandleStickWickLength(node_state->getCurCandleStickWickStartPosition().y() - node_state->getCurCandleStickWickEndPosition().y());
-        }else{
+        // set the body top and bottom positions based on whether the candle is bullish or bearish
+        double bodyTop = std::min(openPosition, closePosition);
+        double bodyBottom = std::max(openPosition, closePosition);
+        node_state->setCurCandleStickBodyTopPosition(QPointF(0, bodyTop));
+        node_state->setCurCandleStickBodyBottomPosition(QPointF(0, bodyBottom));
+        // set lengths
+        double bodyLength = std::abs(bodyTop - bodyBottom);
+        node_state->setCurCandleSickBodyLength(bodyLength);
+        node_state->setPrevCandleStickBodyLength(bodyLength);
+        node_state->setCurCandleStickWickLength(std::abs(highPosition - lowPosition));
+        node_state->setPrevCandleStickWickLength(std::abs(highPosition - lowPosition));
 
-        }
-    setIsStateInitialized(true);
+        // set the current candlestick body location
+        node_state->setCurCandleStickBodyLocation(QPoint(node_width / 2, bodyLength / 2));
     }else {
         // Dynamic case: set all OHLC values to the open value
         double openValue = ohlcData[0];
@@ -189,14 +211,17 @@ void graphTimeFrameNode::initializeState(){
         node_state->setPrevCandleStickBodyLength(0);
         node_state->setCurCandleStickWickLength(0);
         node_state->setPrevCandleStickWickLength(0);
-        setIsStateInitialized(true);
     }
+    setIsStateInitialized(true); // Moved outside the if-else block
 }
 
 // this populates the internal components with all the data given to it by state parameter.
 void graphTimeFrameNode::populateInternalState()
 {
+    // Create the candlestick and add it to this node
     candle_stick = new candle(this, node_state);
+    path_graph_point = new pathGraphPoint();
+    addToGroup(candle_stick);
 }
 
 void graphTimeFrameNode::setPosition(qreal x, qreal y){
@@ -208,7 +233,61 @@ void graphTimeFrameNode::setPosition(qreal x, qreal y){
 void graphTimeFrameNode::mergeNode() {
     // Get the position of the candlestick
     QPointF candlePos = candle_stick->pos();
+    
     // Set the x and y positions for the path_graph_point
     path_graph_point->setX(candlePos.x());
     path_graph_point->setY(candlePos.y());
+}
+
+void graphTimeFrameNode::hoverEnterEvent(QGraphicsSceneHoverEvent *event)
+{
+    std::cout << "hover event captured" << std::endl;
+    QGraphicsScene *scene = this->scene();
+    if (scene) {
+        QPointF scenePos = mapToScene(event->pos());
+        
+        // Create a QTextBrowser to display the information
+        QTextBrowser *infoBrowser = new QTextBrowser();
+        infoBrowser->setReadOnly(true);
+        infoBrowser->setText(QString("Open: %1<br>High: %2<br>Low: %3<br>Close: %4")
+                             .arg(node_state->getOpen())
+                             .arg(node_state->getHigh())
+                             .arg(node_state->getLow())
+                             .arg(node_state->getClose()));
+        
+        // Set up the appearance of the info window
+        infoBrowser->setStyleSheet("background-color: white; color: black; font-size: 10pt;");
+        infoBrowser->setFrameStyle(QFrame::Box | QFrame::Plain);
+        infoBrowser->setLineWidth(1);
+        
+        // Create a proxy widget to embed the QTextBrowser in the scene
+        QGraphicsProxyWidget *proxy = new QGraphicsProxyWidget();
+        proxy->setWidget(infoBrowser);
+        proxy->setZValue(1);  // Ensure it's drawn on top
+        
+        // Position the info window near the candle body
+        proxy->setPos(scenePos + QPointF(10, 10));
+        
+        // Add the info window to the scene
+        scene->addItem(proxy);
+        
+        // Store the info window for later removal
+        setData(0, QVariant::fromValue<QGraphicsItem*>(proxy));
+    }
+}
+
+void graphTimeFrameNode::hoverLeaveEvent(QGraphicsSceneHoverEvent *event)
+{
+    std::cout << "hover leave event captured" << std::endl;
+    QGraphicsScene *scene = this->scene();
+    if (scene) {
+        // Retrieve the stored info window
+        QGraphicsItem *infoGroup = data(0).value<QGraphicsItem*>();
+        if (infoGroup) {
+            // Remove the info window from the scene
+            scene->removeItem(infoGroup);
+            delete infoGroup;
+            setData(0, QVariant());  // Clear the stored data to avoid dangling pointers
+        }
+    }
 }

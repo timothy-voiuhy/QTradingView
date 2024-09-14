@@ -10,7 +10,7 @@ class MainWindow:public QMainWindow {
     public:
         QGraphicsView *GraphingView;
         QGraphicsScene *GraphingScene;
-        MainWindow();
+        MainWindow(QWidget *parent = nullptr);
         ~MainWindow();
 };
 #endif

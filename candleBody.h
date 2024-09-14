@@ -5,32 +5,22 @@
 #include <QRectF>
 #include <QGraphicsRectItem>
 
+class graphTimeFrameNodeState;
+
 class candleBody : public QObject ,  public QGraphicsRectItem{
     Q_OBJECT
 
     public:
-        explicit candleBody(QGraphicsItem *parent = nullptr, double open, double close);
+        explicit candleBody(QGraphicsItem *parent = nullptr, graphTimeFrameNodeState *nodestate = nullptr);
         ~candleBody();
 
-    public slots:
-        void onMouseEnter();
-        void onMouseClick();
-
     private:
-        QRectF m_candleBodyPosition;
-        QColor m_color;
         bool m_isHighlighted;
-        void setDirectionColor();
 
     public:
-        QRectF getCandleBodyPosition() const;
-        QColor getColor() const;
+        graphTimeFrameNodeState *node_state;
         bool isHighlighted() const;
-        void setCandleBodyPosition(const QRectF &position);
-        void setColor(const QColor &color);
         void setHighlighted(bool highlighted);
-        double openValue;
-        double closeValue;
         void paint(QPainter *painter, const QStyleOptionGraphicsItem *option, QWidget *widget) override;
 
 };

@@ -13,7 +13,7 @@ class candleStickWick : public QObject , public QGraphicsLineItem{
     Q_OBJECT
 
     public:
-        explicit candleStickWick(QGraphicsItem *parent = nullptr, graphTimeFrameNodeState* nodestate);
+        explicit candleStickWick(QGraphicsItem *parent = nullptr, graphTimeFrameNodeState* nodestate = nullptr);
         ~candleStickWick();
         void setLength(qreal length);
         void paint(QPainter *painter, const QStyleOptionGraphicsItem *option, QWidget *widget) override;

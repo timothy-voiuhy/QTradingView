@@ -20,7 +20,10 @@ void candleStickWick::paint(QPainter *painter, const QStyleOptionGraphicsItem *o
     Q_UNUSED(widget);
 
     // Set the pen for the candlestick wick
-    painter->setPen(pen());
+    // Set the position of the wick line
+    QLineF wickLine(node_state->getCurCandleStickWickStartPosition(), node_state->getCurCandleStickWickEndPosition());
+    setLine(wickLine);
+    painter->setPen(QPen(node_state->getCandleStickWickColor()));
 
     // Draw the candlestick wick
     painter->drawLine(line());

@@ -5,12 +5,12 @@
 #include <QGraphicsItemGroup>
 #include <QDateTime>
 #include <QVector>
-#include "candleStickState.h"
 
 class pathGraphPoint;
 class graphTimeFrameNodeState;
+class candle;
 
-class graphTimeFrameNode :public QGraphicsItem{
+class graphTimeFrameNode :public QGraphicsItemGroup{
 
     private:
         graphTimeFrameNodeState *node_state;
@@ -51,6 +51,10 @@ class graphTimeFrameNode :public QGraphicsItem{
         void updateNodeGeometry(double current_price);
         void initializeState();
         void setPosition(qreal x, qreal y);
+
+    protected:
+        void hoverEnterEvent(QGraphicsSceneHoverEvent *event) override;
+        void hoverLeaveEvent(QGraphicsSceneHoverEvent *event) override;
 };
 
 #endif

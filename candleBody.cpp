@@ -1,10 +1,14 @@
 #include "candleBody.h"
-#include <QGraphicsRectItem>
+#include "candleStickState.h"
+#include <QPainter>
 #include <QPen>
 
-candleBody::candleBody(QGraphicsItem *parent, double open,
-    double close) : m_isHighlighted(false), openValue(open),
-    closeValue(close) {
+candleBody::candleBody(QGraphicsItem *parent, graphTimeFrameNodeState *nodeState)
+    : QGraphicsRectItem(parent), node_state(nodeState), m_isHighlighted(false)
+{
+    // Initialize the rectangle based on the node state
+    // setPos(node_state.getCurCandleStickBody)
+    setRect(0, node_state->getCurCandleStickBodyTopPosition().y(), node_state->getCurCandleStickBodyWidth(), node_state->getCurCandleStickBodyLength());
 }
 
 candleBody::~candleBody() {
@@ -14,53 +18,17 @@ void candleBody::paint(QPainter *painter, const QStyleOptionGraphicsItem *option
 {
     Q_UNUSED(option);
     Q_UNUSED(widget);
-}
 
-void candleBody::onMouseEnter() {
-    // enter
-    setHighlighted(true);
-}
+    // Set the pen and brush for the candlestick body
+    painter->setPen(QPen(node_state->getCandleStickBodyColor()));
+    painter->setBrush(QBrush(node_state->getCandleStickBodyColor()));
 
-void candleBody::onMouseClick() {
-
-}
-
-void candleBody::setDirectionColor(){
-    if(closeValue > openValue){
-        m_color = Qt::green;
-    }
-    else{
-        m_color = Qt::red;
-    }
-    setColor(m_color);
-    setBrush(QBrush(m_color));
-}
-
-QRectF candleBody::getCandleBodyPosition() const
-{
-    return m_candleBodyPosition;
-}
-
-QColor candleBody::getColor() const {
-    return m_color;
+    // Draw the candlestick body
+    painter->drawRect(rect());
 }
 
 bool candleBody::isHighlighted() const {
     return m_isHighlighted;
-}
-
-void candleBody::setCandleBodyPosition(const QRectF &position) {
-    if (m_candleBodyPosition != position) {
-        m_candleBodyPosition = position;
-        setRect(position);
-    }
-}
-
-void candleBody::setColor(const QColor &color) {
-    if (m_color != color) {
-        m_color = color;
-        setBrush(QBrush(m_color));
-    }
 }
 
 void candleBody::setHighlighted(bool highlighted) {

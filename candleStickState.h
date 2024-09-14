@@ -77,6 +77,7 @@ class graphTimeFrameNodeState {
         int getPrevCandleStickWickLength() const;
         int getPrevCandleStickBodyLength() const;
         int getCurCandleStickBodyWidth() const;
+        int getCurCandleStickBodyLength() const;
 
         // Setters
         void setId(int __id);
