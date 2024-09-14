@@ -31,6 +31,8 @@ set(PROJECT_SOURCES
         pathGraphPoint.cpp
         candleStickWick.cpp 
         candleStickWick.h
+        candleStickDataStream.h 
+        candleStickDataStream.cpp
 )
 
 if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)
