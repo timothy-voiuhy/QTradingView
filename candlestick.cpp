@@ -9,35 +9,68 @@
 #include "candleBody.h"
 #include "candleStickWick.h"
 
+#include <QPainter>
+
 candle::~candle(){
 
 }
 
-candle::candle(QGraphicsItem *parent, 
-    QColor candleBodyColor, 
-    QColor candleStickColor,
-    QVector<double> ohlcData): m_isHighlighted(false){
-    open = ohlcData[0];
-    high = ohlcData[1];
-    low = ohlcData[2];
-    close = ohlcData[3];
+candle::candle(QGraphicsItem *parent, graphTimeFrameNodeState *nodestate): m_isHighlighted(false){
+    node_state = nodestate;
+    open = node_state->getOpen(); 
+    high = node_state->getHigh();
+    low = node_state->getLow();
+    close = node_state->getClose();
+    ohlcData = node_state->getOHLCdata();
     candle_stick_body = new candleBody(this, open, close);
     candle_stick_wick = new candleStickWick(this, ohlcData);
+
     addToGroup(candle_stick_body);
     addToGroup(candle_stick_wick);
 }
 
 double candle::getWickTop()
 {
-    return 0.0;
+    return candle_stick_wick->highValue;
 }
 
 double candle::getWickBottom()
 {
-    return 0.0;
+    return candle_stick_wick->lowValue;
 }
 
-void candle::setHighlighted(bool highlighted) {
+QRectF candle::boundingRect() const
+{
+    return QRectF();
+}
+
+void candle::paint(QPainter *painter, const QStyleOptionGraphicsItem *option, QWidget *widget)
+{
+    Q_UNUSED(option);
+    Q_UNUSED(widget);
+
+    // Set the pen and brush for the candlestick body
+    painter->setPen(node_state->getCandleStickBodyPen());
+    painter->setBrush(node_state->getCandleStickBodyColor());
+
+    // Draw the candlestick body
+    QPointF bodyTop = node_state->getCurCandleStickBodyTopPosition();
+    QPointF bodyBottom = node_state->getPrevCandleStickBodyBottomPosition();
+    QRectF bodyRect(bodyTop.x(), bodyTop.y(), node_state->getCurCandleStickBodyWidth(), bodyBottom.y() - bodyTop.y());
+    painter->drawRect(bodyRect);
+
+    // Set the pen for the candlestick wick
+    painter->setPen(node_state->getCandleStickWickColor());
+
+    // Draw the upper wick
+    painter->drawLine(QLineF(bodyTop, node_state->getCurCandleStickWickEndPosition()));
+
+    // Draw the lower wick
+    painter->drawLine(QLineF(bodyBottom, node_state->getCurCandleStickWickStartPosition()));
+}
+
+void candle::setHighlighted(bool highlighted)
+{
     candle_stick_body->setHighlighted(highlighted);
 }
 

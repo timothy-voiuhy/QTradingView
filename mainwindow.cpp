@@ -2,5 +2,17 @@
 #include <QGraphicsScene>
 #include <QMainWindow>
 
-// for the ai to edit the graph : it sends path points.
-// this means that the path points are the output of the ai.
+#include "mainwindow.h"
+#include "graphTimeFrameNode.h"
+
+MainWindow::MainWindow(){
+    GraphingScene = new QGraphicsScene();
+    GraphingView = new QGraphicsView(GraphingScene);
+    // candlestick testing
+    graphTimeFrameNode *candle  = new graphTimeFrameNode();
+    GraphingScene->addItem(candle);
+}
+
+MainWindow::~MainWindow(){
+
+}

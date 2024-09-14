@@ -1,131 +1,213 @@
 #include "candleStickState.h"
 
 // Getters
-double candleState::getHigh() const {
+double graphTimeFrameNodeState::getHigh() const {
     return high;
 }
 
-double candleState::getLow() const {
+double graphTimeFrameNodeState::getLow() const {
     return low;
 }
 
-double candleState::getOpen() const {
+double graphTimeFrameNodeState::getOpen() const {
     return open;
 }
 
-double candleState::getClose() const {
+double graphTimeFrameNodeState::getClose() const {
     return close;
 }
 
-QColor candleState::getCandleStickColor() const {
-    return candleStickColor;
+QDateTime graphTimeFrameNodeState::getTimeState() const
+{
+    return QDateTime();
 }
 
-QColor candleState::getCandleStickBodyColor() const {
+int graphTimeFrameNodeState::getId() const
+{
+    return 0;
+}
+
+QColor graphTimeFrameNodeState::getCandleStickWickColor() const {
+    return candleStickWickColor;
+}
+
+QColor graphTimeFrameNodeState::getCandleStickBodyColor() const {
     return candleStickBodyColor;
 }
 
-QPen candleState::getCandleStickPen() const {
-    return candleStickPen;
-}
-
-QPen candleState::getCandleStickBodyPen() const {
+QPen graphTimeFrameNodeState::getCandleStickBodyPen() const {
     return candleStickBodyPen;
 }
 
-QPoint candleState::getPrevCandleStickBodyLocation() const {
+QPoint graphTimeFrameNodeState::getPrevCandleStickBodyLocation() const {
     return prevCandleStickBodyLocation;
 }
 
-QPoint candleState::getCurCandleStickBodyLocation() const {
+QPoint graphTimeFrameNodeState::getCurCandleStickBodyLocation() const {
     return curCandleStickBodyLocation;
 }
 
-QPoint candleState::getPrevCandleStickStartPosition() const {
-    return prevCandleStickStartPosition;
+QPointF graphTimeFrameNodeState::getPrevCandleStickWickStartPosition() const {
+    return prevCandleStickWickStartPosition;
 }
 
-QPoint candleState::getCurCandleStickEndPosition() const {
-    return curCandleStickEndPosition;
+QPointF graphTimeFrameNodeState::getCurCandleStickWickStartPosition() const
+{
+    return curCandleStickWickStartPosition;
 }
 
-int candleState::getPrevCandleStickLength() const {
-    return prevCandleStickLength;
+QPointF graphTimeFrameNodeState::getCurCandleStickWickEndPosition() const {
+    return curCandleStickWickEndPosition;
 }
 
-int candleState::getCurCandleSickLength() const {
-    return curCandleSickLength;
+QPointF graphTimeFrameNodeState::getPrevCandleStickWickEndPositon() const
+{
+    return prevCandleStickWickEndPosition;
 }
 
-int candleState::getPrevCandleStickBodyLength() const {
+int graphTimeFrameNodeState::getPrevCandleStickLength() const {
+    return prevCandleStickWickLength;
+}
+
+int graphTimeFrameNodeState::getCurCandleSickLength() const {
+    return curCandleSickWickLength;
+}
+
+int graphTimeFrameNodeState::getPrevCandleStickBodyLength() const {
     return prevCandleStickBodyLength;
 }
 
-int candleState::getCurCandleStickBodyWidth() const {
+int graphTimeFrameNodeState::getCurCandleStickBodyWidth() const {
     return curCandleStickBodyWidth;
 }
 
+void graphTimeFrameNodeState::setId(int __id)
+{
+    id = __id;
+}
+
+void graphTimeFrameNodeState::setTimeState(QDateTime &time_state)
+{
+    timeState = time_state;
+}
+
+void graphTimeFrameNodeState::setIsDynamic(bool is_dynamic)
+{
+    isDynamic = is_dynamic;
+}
+
 // Setters
-void candleState::setHigh(double value) {
+void graphTimeFrameNodeState::setHigh(double value) {
     high = value;
 }
 
-void candleState::setLow(double value) {
+void graphTimeFrameNodeState::setLow(double value) {
     low = value;
 }
 
-void candleState::setOpen(double value) {
+void graphTimeFrameNodeState::setOpen(double value) {
     open = value;
 }
 
-void candleState::setClose(double value) {
+void graphTimeFrameNodeState::setClose(double value) {
     close = value;
 }
 
-void candleState::setCandleStickColor(const QColor& color) {
-    candleStickColor = color;
+void graphTimeFrameNodeState::setCandleStickWickColor(const QColor& color) {
+    candleStickWickColor = color;
 }
 
-void candleState::setCandleStickBodyColor(const QColor& color) {
+void graphTimeFrameNodeState::setCandleStickBodyColor(const QColor& color) {
     candleStickBodyColor = color;
 }
 
-void candleState::setCandleStickPen(const QPen& pen) {
-    candleStickPen = pen;
-}
-
-void candleState::setCandleStickBodyPen(const QPen& pen) {
+void graphTimeFrameNodeState::setCandleStickBodyPen(const QPen& pen) {
     candleStickBodyPen = pen;
 }
 
-void candleState::setPrevCandleStickBodyLocation(const QPoint& location) {
+void graphTimeFrameNodeState::setCurCandleStickWickLength(double length)
+{
+    curCandleSickWickLength = length;
+}
+
+void graphTimeFrameNodeState::setPrevCandleStickWickLength(double length)
+{
+    prevCandleStickWickLength = length;
+}
+
+void graphTimeFrameNodeState::setCurCandleSickBodyLength(double length)
+{
+    curCandleStickBodyLength = length;
+}
+
+void graphTimeFrameNodeState::setPrevCandleStickBodyLocation(const QPoint& location) {
     prevCandleStickBodyLocation = location;
 }
 
-void candleState::setCurCandleStickBodyLocation(const QPoint& location) {
+void graphTimeFrameNodeState::setCurCandleStickBodyLocation(const QPoint& location) {
     curCandleStickBodyLocation = location;
 }
 
-void candleState::setPrevCandleStickStartPosition(const QPoint& position) {
-    prevCandleStickStartPosition = position;
+void graphTimeFrameNodeState::setPrevCandleStickWickStartPosition(const QPointF& position) {
+    prevCandleStickWickStartPosition = position;
 }
 
-void candleState::setCurCandleStickEndPosition(const QPoint& position) {
-    curCandleStickEndPosition = position;
+void graphTimeFrameNodeState::setCurCandleStickWickStartPosition(const QPointF &position)
+{
+    curCandleStickWickStartPosition = position;
 }
 
-void candleState::setPrevCandleStickLength(int length) {
-    prevCandleStickLength = length;
+void graphTimeFrameNodeState::setCurCandleStickWickEndPosition(const QPointF& position) {
+    curCandleStickWickEndPosition = position;
 }
 
-void candleState::setCurCandleSickLength(int length) {
-    curCandleSickLength = length;
+void graphTimeFrameNodeState::setPrevCandleStickWickEndPositon(const QPointF &position)
+{
+    prevCandleStickWickEndPosition = position;
 }
 
-void candleState::setPrevCandleStickBodyLength(int length) {
+void graphTimeFrameNodeState::setPrevCandleStickBodyLength(int length) {
     prevCandleStickBodyLength = length;
 }
 
-void candleState::setCurCandleStickBodyWidth(int width) {
+void graphTimeFrameNodeState::setCurCandleStickBodyWidth(int width) {
     curCandleStickBodyWidth = width;
+}
+
+QPointF graphTimeFrameNodeState::getCurCandleStickBodyTopPosition() const {
+    return curCandleStickBodyTopPosition;
+}
+
+QPointF graphTimeFrameNodeState::getCurCandleStickBodyBottomPosition() const {
+    return curCandleStickBodyBottomPosition;
+}
+
+QPointF graphTimeFrameNodeState::getPrevCandleStickBodyTopPosition() const {
+    return prevCandleStickBodyTopPosition;
+}
+
+QPointF graphTimeFrameNodeState::getPrevCandleStickBodyBottomPosition() const {
+    return prevCandleStickBodyBottomPosition;
+}
+
+void graphTimeFrameNodeState::setCurCandleStickBodyTopPosition(const QPointF& position) {
+    curCandleStickBodyTopPosition = position;
+}
+
+void graphTimeFrameNodeState::setCurCandleStickBodyBottomPosition(const QPointF& position) {
+    curCandleStickBodyBottomPosition = position;
+}
+
+void graphTimeFrameNodeState::setPrevCandleStickBodyTopPosition(const QPointF& position) {
+    prevCandleStickBodyTopPosition = position;
+}
+
+void graphTimeFrameNodeState::setPrevCandleStickBodyBottomPosition(const QPointF& position) {
+    prevCandleStickBodyBottomPosition = position;
+}
+
+QVector<double> graphTimeFrameNodeState::getOHLCdata()
+{
+    QVector<double> ohlc_data = {open, high, low, close};
+    return ohlc_data;
 }

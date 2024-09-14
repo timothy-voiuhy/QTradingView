@@ -2,6 +2,7 @@
 #define CANDLESTICK_H
 
 #include <QPen>
+#include "candleStickState.h"
 
 class QGraphicsRectItem;
 class QGraphicsLineItem;
@@ -16,10 +17,7 @@ class candleStickWick;
 class candle: public QGraphicsItemGroup{
 
 public:
-    explicit candle(QGraphicsItem *parent = nullptr,
-                QColor candleBodyColor,
-                QColor candleStickColor,
-                QVector<double> ohlcData);
+    explicit candle(QGraphicsItem *parent = nullptr, graphTimeFrameNodeState *nodestate);
     ~candle();
     candleBody *candle_stick_body;
     candleStickWick *candle_stick_wick;
@@ -29,9 +27,12 @@ public:
     double close;
     double high;
     double low;
-
+    QVector<double> ohlcData;
+    QRectF boundingRect() const override;
+    void paint(QPainter *painter, const QStyleOptionGraphicsItem *option, QWidget *widget = nullptr) override;
     // void drawCandleStick();
     protected:
+        graphTimeFrameNodeState *node_state;
         bool m_isHighlighted;
         void setHighlighted(bool highlighted);
         void hoverEnterEvent(QGraphicsSceneHoverEvent *event) override;
