@@ -10,6 +10,12 @@ candleBody::candleBody(QGraphicsItem *parent, double open,
 candleBody::~candleBody() {
 }
 
+void candleBody::paint(QPainter *painter, const QStyleOptionGraphicsItem *option, QWidget *widget)
+{
+    Q_UNUSED(option);
+    Q_UNUSED(widget);
+}
+
 void candleBody::onMouseEnter() {
     // enter
     setHighlighted(true);

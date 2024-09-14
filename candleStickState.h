@@ -73,7 +73,8 @@ class graphTimeFrameNodeState {
         QPointF getPrevCandleStickWickEndPositon() const;
 
         int getPrevCandleStickLength() const;
-        int getCurCandleSickLength() const;
+        int getCurCandleSickWickLength() const;
+        int getPrevCandleStickWickLength() const;
         int getPrevCandleStickBodyLength() const;
         int getCurCandleStickBodyWidth() const;
 

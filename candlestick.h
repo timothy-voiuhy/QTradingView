@@ -21,8 +21,6 @@ public:
     ~candle();
     candleBody *candle_stick_body;
     candleStickWick *candle_stick_wick;
-    double getWickTop();
-    double getWickBottom();
     double open;
     double close;
     double high;
@@ -38,10 +36,5 @@ public:
         void hoverEnterEvent(QGraphicsSceneHoverEvent *event) override;
         void hoverLeaveEvent(QGraphicsSceneHoverEvent *event) override;
 };
-
-class pathGraphPoint : public QPoint{
-
-};
-
 
 #endif

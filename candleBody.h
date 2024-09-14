@@ -31,6 +31,7 @@ class candleBody : public QObject ,  public QGraphicsRectItem{
         void setHighlighted(bool highlighted);
         double openValue;
         double closeValue;
+        void paint(QPainter *painter, const QStyleOptionGraphicsItem *option, QWidget *widget) override;
 
 };
 

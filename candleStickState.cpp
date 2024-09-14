@@ -69,8 +69,13 @@ int graphTimeFrameNodeState::getPrevCandleStickLength() const {
     return prevCandleStickWickLength;
 }
 
-int graphTimeFrameNodeState::getCurCandleSickLength() const {
+int graphTimeFrameNodeState::getCurCandleSickWickLength() const {
     return curCandleSickWickLength;
+}
+
+int graphTimeFrameNodeState::getPrevCandleStickWickLength() const
+{
+    return prevCandleStickWickLength;
 }
 
 int graphTimeFrameNodeState::getPrevCandleStickBodyLength() const {

@@ -206,14 +206,9 @@ void graphTimeFrameNode::setPosition(qreal x, qreal y){
 }
 
 void graphTimeFrameNode::mergeNode() {
-    // This function should add the path_graph_point to the context of the candleStick
-    // The position of the path_graph_point is derived as the average height of the wick of the candleStick
-    
-    double wickTop = candle_stick->getWickTop();
-    double wickBottom = candle_stick->getWickBottom();
-    // Calculate the average height of the wick
-    double averageWickHeight = (wickTop + wickBottom) / 2.0;
-    // the x value is the same as candlestick 
-    path_graph_point->setY(averageWickHeight);
-    path_graph_point->setX(candle_stick->candle_stick_wick->x());
+    // Get the position of the candlestick
+    QPointF candlePos = candle_stick->pos();
+    // Set the x and y positions for the path_graph_point
+    path_graph_point->setX(candlePos.x());
+    path_graph_point->setY(candlePos.y());
 }
