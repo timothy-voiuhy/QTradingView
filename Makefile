@@ -213,6 +213,30 @@ QTradingView_autogen/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/QTradingView_autogen.dir/build.make CMakeFiles/QTradingView_autogen.dir/build
 .PHONY : QTradingView_autogen/fast
 
+GraphingView.o: GraphingView.cpp.o
+.PHONY : GraphingView.o
+
+# target to build an object file
+GraphingView.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/QTradingView.dir/build.make CMakeFiles/QTradingView.dir/GraphingView.cpp.o
+.PHONY : GraphingView.cpp.o
+
+GraphingView.i: GraphingView.cpp.i
+.PHONY : GraphingView.i
+
+# target to preprocess a source file
+GraphingView.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/QTradingView.dir/build.make CMakeFiles/QTradingView.dir/GraphingView.cpp.i
+.PHONY : GraphingView.cpp.i
+
+GraphingView.s: GraphingView.cpp.s
+.PHONY : GraphingView.s
+
+# target to generate assembly for a file
+GraphingView.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/QTradingView.dir/build.make CMakeFiles/QTradingView.dir/GraphingView.cpp.s
+.PHONY : GraphingView.cpp.s
+
 QTradingView_autogen/mocs_compilation.o: QTradingView_autogen/mocs_compilation.cpp.o
 .PHONY : QTradingView_autogen/mocs_compilation.o
 
@@ -541,6 +565,9 @@ help:
 	@echo "... QTradingView_autogen_timestamp_deps"
 	@echo "... QTradingView_qmlimportscan"
 	@echo "... QTradingView"
+	@echo "... GraphingView.o"
+	@echo "... GraphingView.i"
+	@echo "... GraphingView.s"
 	@echo "... QTradingView_autogen/mocs_compilation.o"
 	@echo "... QTradingView_autogen/mocs_compilation.i"
 	@echo "... QTradingView_autogen/mocs_compilation.s"

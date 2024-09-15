@@ -3,13 +3,13 @@
 
 #include <QMainWindow>
 
-class QGraphicsView;
-class QGraphicsScene;
+class GraphingView;
+class Graph;
 
 class MainWindow:public QMainWindow {
     public:
-        QGraphicsView *GraphingView;
-        QGraphicsScene *GraphingScene;
+        GraphingView *graphingView;
+        Graph *GraphingScene;
         MainWindow(QWidget *parent = nullptr);
         ~MainWindow();
 };

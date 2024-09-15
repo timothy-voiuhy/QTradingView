@@ -13,8 +13,10 @@ find_package(QT NAMES Qt6 REQUIRED COMPONENTS Widgets Core Network)
 find_package(Qt${QT_VERSION_MAJOR} REQUIRED COMPONENTS Widgets Core Network WebEngineWidgets)
 find_package(Qt6WebSockets REQUIRED)
 find_package(Qt6Sql REQUIRED)
-set(QSCINTILLA_INCLUDE_DIR "/usr/include/x86_64-linux-gnu/Qsci/")
+# set(QSCINTILLA_INCLUDE_DIR "/usr/include/x86_64-linux-gnu/Qsci/")
+set(SQL_INCLUDE_DIR "/usr/include/x86_64-linux-gnu/qt6/QtSql/")
 set(QSCINTILLA_LIBRARY "${CMAKE_CURRENT_LIST_DIR}/lib/QScintilla/src/libqscintilla2_qt6.so.15.2")
+# set(MYSQL_DRIVER "${CMAKE_CURRENT_LIST_DIR}/plugins/sqldrivers/libmysqlclient.so")
 set(PROJECT_SOURCES
         main.cpp
         mainwindow.cpp
@@ -39,6 +41,8 @@ set(PROJECT_SOURCES
         graph.cpp 
         dbManager.cpp 
         dbManager.h 
+        GraphingView.cpp 
+        GraphingView.h
 )
 
 if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)
@@ -65,11 +69,13 @@ else()
 endif()
 
 target_link_directories(QTradingView PRIVATE ${QSCINTILLA_INCLUDE_DIR})
+# target_link_directories(QTradingView PRIVATE ${SQL_INCLUDE_DIR})
 
 target_link_libraries(QTradingView PRIVATE Qt6WebSockets)
 target_link_libraries(QTradingView PRIVATE Qt6Sql)
 target_link_libraries(QTradingView PRIVATE Qt${QT_VERSION_MAJOR}::Widgets Qt${QT_VERSN_MAJOR}::Core Qt6::Network Qt6::WebEngineWidgets)
 target_link_libraries(QTradingView PRIVATE ${QSCINTILLA_LIBRARY})
+# target_link_libraries(QTradingView PRIVATE ${MYSQL_DRIVER})
 
 # Qt for iOS sets MACOSX_BUNDLE_GUI_IDENTIFIER automatically since Qt 6.1.
 # If you are developing for iOS or macOS you should consider setting an

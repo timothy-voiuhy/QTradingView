@@ -2,6 +2,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/QTradingView_autogen.dir/AutogenUsed.txt"
   "CMakeFiles/QTradingView_autogen.dir/ParseCache.txt"
   "QTradingView_autogen"
+  "CMakeFiles/QTradingView.dir/GraphingView.cpp.o"
+  "CMakeFiles/QTradingView.dir/GraphingView.cpp.o.d"
   "CMakeFiles/QTradingView.dir/QTradingView_autogen/mocs_compilation.cpp.o"
   "CMakeFiles/QTradingView.dir/QTradingView_autogen/mocs_compilation.cpp.o.d"
   "CMakeFiles/QTradingView.dir/axes.cpp.o"

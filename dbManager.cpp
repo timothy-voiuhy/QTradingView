@@ -4,10 +4,15 @@
 #include <QDateTime>
 #include <QVariant>
 #include <QDebug>
+#include <QtSql/QSqlDatabase>
 
-dbManager::dbManager(const QString &dbName_) : dbName(dbName_), db(QSqlDatabase::addDatabase("MYSQL"))
+dbManager::dbManager(const QString &dbName_) : dbName(dbName_), db(QSqlDatabase::addDatabase("QMYSQL"))
 {
     db.setDatabaseName(dbName);
+    db.setHostName("localhost");
+    db.setUserName("program");
+    db.setPassword("program");
+    openDB();
 }
 
 dbManager::~dbManager()
@@ -19,7 +24,7 @@ bool dbManager::openDB()
 {
     if (!db.open())
     {
-        qDebug() << "Error: connection with database fail";
+        qDebug() << "Error: connection with database fail" << db.lastError().text();
         return false;
     }
     else
@@ -34,10 +39,15 @@ void dbManager::closeDB()
     db.close();
 }
 
-double dbManager::getMaxValue(const QString &columnName)
+double dbManager::getMaxValue(const QString &columnName, const QString &tablename)
 {
+    if (!db.isOpen()) {
+        qDebug() << "Database not open";
+        return -1;
+    }
+
     QSqlQuery query;
-    query.prepare(QString("SELECT MAX(%1) FROM %2").arg(columnName).arg(tableName));
+    query.prepare(QString("SELECT MAX(%1) FROM %2").arg(columnName).arg(tablename));
 
     if (!query.exec())
     {
@@ -53,10 +63,15 @@ double dbManager::getMaxValue(const QString &columnName)
     return -1;
 }
 
-double dbManager::getMinValue(const QString &columnName)
+double dbManager::getMinValue(const QString &columnName, const QString &tablename)
 {
+    if (!db.isOpen()) {
+        qDebug() << "Database not open";
+        return -1;
+    }
+
     QSqlQuery query;
-    query.prepare(QString("SELECT MIN(%1) FROM %2").arg(columnName).arg(tableName));
+    query.prepare(QString("SELECT MIN(%1) FROM %2").arg(columnName).arg(tablename));
 
     if (!query.exec())
     {
@@ -72,11 +87,17 @@ double dbManager::getMinValue(const QString &columnName)
     return -1;
 }
 
-QVector<double> dbManager::getOHLCData(int candleID)
+QVector<double> dbManager::getOHLCData(int candleID, const QString &tablename)
 {
     QVector<double> ohlcData;
+
+    if (!db.isOpen()) {
+        qDebug() << "Database not open";
+        return ohlcData;
+    }
+
     QSqlQuery query;
-    query.prepare(QString("SELECT open, high, low, close FROM %1 WHERE id = :id").arg(tableName));
+    query.prepare(QString("SELECT Open, High, Low, Close FROM %1 WHERE id = :id").arg(tablename));
     query.bindValue(":id", candleID);
 
     if (!query.exec())
@@ -96,11 +117,41 @@ QVector<double> dbManager::getOHLCData(int candleID)
     return ohlcData;
 }
 
-QVector<QPair<QVector<double>, QDateTime>> dbManager::loadData(int startCandleID, int endCandleID)
+int dbManager::getnNodes(const QString &tablename){
+    if (!db.isOpen()) {
+        qDebug() << "Database not open";
+        return -1;
+    }
+
+    QSqlQuery query;
+    query.prepare(QString("SELECT COUNT(*) FROM %1").arg(tablename));
+
+    if (!query.exec())
+    {
+        qDebug() << "getnNodes error: " << query.lastError();
+        return -1;
+    }
+
+    if (query.next())
+    {
+        int count = query.value(0).toInt();
+        return count;
+        // qDebug() << "Number of rows in" << tablename << ":" << count;
+    }
+    return -1;
+}
+
+QVector<QPair<QVector<double>, QDateTime>> dbManager::loadData(int startCandleID, int endCandleID, const QString &tablename)
 {
     QVector<QPair<QVector<double>, QDateTime>> data;
+
+    if (!db.isOpen()) {
+        qDebug() << "Database not open";
+        return data;
+    }
+
     QSqlQuery query;
-    query.prepare(QString("SELECT open, high, low, close, datetime FROM %1 WHERE id BETWEEN :startID AND :endID").arg(tableName));
+    query.prepare(QString("SELECT Open, High, Low, Close, Date FROM %1 WHERE id BETWEEN :startID AND :endID").arg(tablename));
     query.bindValue(":startID", startCandleID);
     query.bindValue(":endID", endCandleID);
 

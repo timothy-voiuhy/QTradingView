@@ -54,7 +54,7 @@ if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT
      NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/bin/QTradingView")
     file(RPATH_CHANGE
          FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/bin/QTradingView"
-         OLD_RPATH "/usr/include/x86_64-linux-gnu/Qsci:/media/program/data_drive/MYAPPLICATIONS/QTradingView/lib/QScintilla/src:"
+         OLD_RPATH "/media/program/data_drive/MYAPPLICATIONS/QTradingView/lib/QScintilla/src:"
          NEW_RPATH "")
     if(CMAKE_INSTALL_DO_STRIP)
       execute_process(COMMAND "/usr/bin/strip" "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/bin/QTradingView")

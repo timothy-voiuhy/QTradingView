@@ -9,6 +9,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "" "QTradingView_autogen/timestamp" "custom" "QTradingView_autogen/deps"
+  "/media/program/data_drive/MYAPPLICATIONS/QTradingView/GraphingView.cpp" "CMakeFiles/QTradingView.dir/GraphingView.cpp.o" "gcc" "CMakeFiles/QTradingView.dir/GraphingView.cpp.o.d"
   "/media/program/data_drive/MYAPPLICATIONS/QTradingView/QTradingView_autogen/mocs_compilation.cpp" "CMakeFiles/QTradingView.dir/QTradingView_autogen/mocs_compilation.cpp.o" "gcc" "CMakeFiles/QTradingView.dir/QTradingView_autogen/mocs_compilation.cpp.o.d"
   "/media/program/data_drive/MYAPPLICATIONS/QTradingView/axes.cpp" "CMakeFiles/QTradingView.dir/axes.cpp.o" "gcc" "CMakeFiles/QTradingView.dir/axes.cpp.o.d"
   "/media/program/data_drive/MYAPPLICATIONS/QTradingView/candleBody.cpp" "CMakeFiles/QTradingView.dir/candleBody.cpp.o" "gcc" "CMakeFiles/QTradingView.dir/candleBody.cpp.o.d"

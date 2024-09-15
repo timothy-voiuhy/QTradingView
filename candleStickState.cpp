@@ -24,7 +24,7 @@ QDateTime graphTimeFrameNodeState::getTimeState() const
 
 int graphTimeFrameNodeState::getId() const
 {
-    return 0;
+    return id;
 }
 
 QColor graphTimeFrameNodeState::getCandleStickWickColor() const {

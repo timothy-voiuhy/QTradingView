@@ -426,6 +426,12 @@
 	"HEADERS" : 
 	[
 		[
+			"/media/program/data_drive/MYAPPLICATIONS/QTradingView/GraphingView.h",
+			"MU",
+			"EWIEGA46WW/moc_GraphingView.cpp",
+			null
+		],
+		[
 			"/media/program/data_drive/MYAPPLICATIONS/QTradingView/axes.h",
 			"MU",
 			"EWIEGA46WW/moc_axes.cpp",
@@ -578,6 +584,11 @@
 	"SETTINGS_FILE" : "/media/program/data_drive/MYAPPLICATIONS/QTradingView/CMakeFiles/QTradingView_autogen.dir/AutogenUsed.txt",
 	"SOURCES" : 
 	[
+		[
+			"/media/program/data_drive/MYAPPLICATIONS/QTradingView/GraphingView.cpp",
+			"MU",
+			null
+		],
 		[
 			"/media/program/data_drive/MYAPPLICATIONS/QTradingView/axes.cpp",
 			"MU",

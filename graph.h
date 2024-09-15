@@ -8,8 +8,9 @@
 #include <QVector>
 
 class graphTimeFrameNode;
+class graphTimeFrameNodeState;
 
-class Graph: QGraphicsScene{
+class Graph:public QGraphicsScene{
 
     private:
         double PRICE_MULTIPLIER = 10000;
@@ -24,12 +25,14 @@ class Graph: QGraphicsScene{
         void computeSceneRectDimensions();
         void populateNodes(bool batch = false);
         dbManager *db_manager;
+        int numNodes;
     protected:
         int node_width, scene_width, scene_height;
         int MAX_NODES; // this define the maximum nodes that can  be placed in a scene at ounce
         double max_value, min_value, max_position, min_position;
     public:
-        Graph(int __pixelsPerPip);
+        QString dbtableName;
+        Graph(int __pixelsPerPip, const QString &tableName);
         ~Graph();
 };
 
