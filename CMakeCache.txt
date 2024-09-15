@@ -367,6 +367,9 @@ Qt6QuickWidgets_DIR:PATH=/usr/lib/x86_64-linux-gnu/cmake/Qt6QuickWidgets
 //The directory containing a CMake configuration file for Qt6Quick.
 Qt6Quick_DIR:PATH=/usr/lib/x86_64-linux-gnu/cmake/Qt6Quick
 
+//The directory containing a CMake configuration file for Qt6Sql.
+Qt6Sql_DIR:PATH=/usr/lib/x86_64-linux-gnu/cmake/Qt6Sql
+
 //The directory containing a CMake configuration file for Qt6WebChannel.
 Qt6WebChannel_DIR:PATH=/usr/lib/x86_64-linux-gnu/cmake/Qt6WebChannel
 
@@ -378,6 +381,9 @@ Qt6WebEngineCore_DIR:PATH=/usr/lib/x86_64-linux-gnu/cmake/Qt6WebEngineCore
 
 //The directory containing a CMake configuration file for Qt6WebEngineWidgets.
 Qt6WebEngineWidgets_DIR:PATH=/usr/lib/x86_64-linux-gnu/cmake/Qt6WebEngineWidgets
+
+//The directory containing a CMake configuration file for Qt6WebSockets.
+Qt6WebSockets_DIR:PATH=/usr/lib/x86_64-linux-gnu/cmake/Qt6WebSockets
 
 //The directory containing a CMake configuration file for Qt6WidgetsTools.
 Qt6WidgetsTools_DIR:PATH=/usr/lib/x86_64-linux-gnu/cmake/Qt6WidgetsTools
@@ -1289,6 +1295,8 @@ QT_FEATURE_splashscreen:INTERNAL=ON
 QT_FEATURE_splitter:INTERNAL=ON
 //Qt feature: sql (from target Qt6::Core)
 QT_FEATURE_sql:INTERNAL=ON
+//Qt feature: sqlmodel (from target Qt6::Sql)
+QT_FEATURE_sqlmodel:INTERNAL=ON
 //Qt feature: sse2 (from target Qt6::Core)
 QT_FEATURE_sse2:INTERNAL=ON
 //Qt feature: sse3 (from target Qt6::Core)

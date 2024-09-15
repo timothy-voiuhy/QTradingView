@@ -285,6 +285,30 @@ candleBody.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/QTradingView.dir/build.make CMakeFiles/QTradingView.dir/candleBody.cpp.s
 .PHONY : candleBody.cpp.s
 
+candleStickDataStream.o: candleStickDataStream.cpp.o
+.PHONY : candleStickDataStream.o
+
+# target to build an object file
+candleStickDataStream.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/QTradingView.dir/build.make CMakeFiles/QTradingView.dir/candleStickDataStream.cpp.o
+.PHONY : candleStickDataStream.cpp.o
+
+candleStickDataStream.i: candleStickDataStream.cpp.i
+.PHONY : candleStickDataStream.i
+
+# target to preprocess a source file
+candleStickDataStream.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/QTradingView.dir/build.make CMakeFiles/QTradingView.dir/candleStickDataStream.cpp.i
+.PHONY : candleStickDataStream.cpp.i
+
+candleStickDataStream.s: candleStickDataStream.cpp.s
+.PHONY : candleStickDataStream.s
+
+# target to generate assembly for a file
+candleStickDataStream.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/QTradingView.dir/build.make CMakeFiles/QTradingView.dir/candleStickDataStream.cpp.s
+.PHONY : candleStickDataStream.cpp.s
+
 candleStickState.o: candleStickState.cpp.o
 .PHONY : candleStickState.o
 
@@ -356,6 +380,54 @@ candlestick.s: candlestick.cpp.s
 candlestick.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/QTradingView.dir/build.make CMakeFiles/QTradingView.dir/candlestick.cpp.s
 .PHONY : candlestick.cpp.s
+
+dbManager.o: dbManager.cpp.o
+.PHONY : dbManager.o
+
+# target to build an object file
+dbManager.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/QTradingView.dir/build.make CMakeFiles/QTradingView.dir/dbManager.cpp.o
+.PHONY : dbManager.cpp.o
+
+dbManager.i: dbManager.cpp.i
+.PHONY : dbManager.i
+
+# target to preprocess a source file
+dbManager.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/QTradingView.dir/build.make CMakeFiles/QTradingView.dir/dbManager.cpp.i
+.PHONY : dbManager.cpp.i
+
+dbManager.s: dbManager.cpp.s
+.PHONY : dbManager.s
+
+# target to generate assembly for a file
+dbManager.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/QTradingView.dir/build.make CMakeFiles/QTradingView.dir/dbManager.cpp.s
+.PHONY : dbManager.cpp.s
+
+graph.o: graph.cpp.o
+.PHONY : graph.o
+
+# target to build an object file
+graph.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/QTradingView.dir/build.make CMakeFiles/QTradingView.dir/graph.cpp.o
+.PHONY : graph.cpp.o
+
+graph.i: graph.cpp.i
+.PHONY : graph.i
+
+# target to preprocess a source file
+graph.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/QTradingView.dir/build.make CMakeFiles/QTradingView.dir/graph.cpp.i
+.PHONY : graph.cpp.i
+
+graph.s: graph.cpp.s
+.PHONY : graph.s
+
+# target to generate assembly for a file
+graph.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/QTradingView.dir/build.make CMakeFiles/QTradingView.dir/graph.cpp.s
+.PHONY : graph.cpp.s
 
 graphTimeFrameNode.o: graphTimeFrameNode.cpp.o
 .PHONY : graphTimeFrameNode.o
@@ -478,6 +550,9 @@ help:
 	@echo "... candleBody.o"
 	@echo "... candleBody.i"
 	@echo "... candleBody.s"
+	@echo "... candleStickDataStream.o"
+	@echo "... candleStickDataStream.i"
+	@echo "... candleStickDataStream.s"
 	@echo "... candleStickState.o"
 	@echo "... candleStickState.i"
 	@echo "... candleStickState.s"
@@ -487,6 +562,12 @@ help:
 	@echo "... candlestick.o"
 	@echo "... candlestick.i"
 	@echo "... candlestick.s"
+	@echo "... dbManager.o"
+	@echo "... dbManager.i"
+	@echo "... dbManager.s"
+	@echo "... graph.o"
+	@echo "... graph.i"
+	@echo "... graph.s"
 	@echo "... graphTimeFrameNode.o"
 	@echo "... graphTimeFrameNode.i"
 	@echo "... graphTimeFrameNode.s"

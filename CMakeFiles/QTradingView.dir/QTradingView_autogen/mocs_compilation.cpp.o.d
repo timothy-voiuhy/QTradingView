@@ -333,6 +333,52 @@ CMakeFiles/QTradingView.dir/QTradingView_autogen/mocs_compilation.cpp.o: \
  /usr/include/x86_64-linux-gnu/qt6/QtGui/qrgba64.h \
  /usr/include/x86_64-linux-gnu/qt6/QtGui/qimage.h \
  /usr/include/x86_64-linux-gnu/qt6/QtGui/qpixelformat.h \
+ /media/program/data_drive/MYAPPLICATIONS/QTradingView/QTradingView_autogen/EWIEGA46WW/moc_candleStickDataStream.cpp \
+ /media/program/data_drive/MYAPPLICATIONS/QTradingView/QTradingView_autogen/EWIEGA46WW/../../candleStickDataStream.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtWebSockets/QWebSocket \
+ /usr/include/x86_64-linux-gnu/qt6/QtWebSockets/qwebsocket.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtCore/QUrl \
+ /usr/include/x86_64-linux-gnu/qt6/QtCore/qurl.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtNetwork/QAbstractSocket \
+ /usr/include/x86_64-linux-gnu/qt6/QtNetwork/qabstractsocket.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtNetwork/qtnetworkglobal.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtNetwork/qtnetwork-config.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtNetwork/qtnetworkexports.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtCore/qiodevice.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtNetwork/QNetworkRequest \
+ /usr/include/x86_64-linux-gnu/qt6/QtNetwork/qnetworkrequest.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtCore/QSharedDataPointer \
+ /usr/include/x86_64-linux-gnu/qt6/QtCore/qshareddata.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtCore/QString \
+ /usr/include/x86_64-linux-gnu/qt6/QtCore/qstring.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtCore/QVariant \
+ /usr/include/x86_64-linux-gnu/qt6/QtCore/qvariant.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtNetwork/QNetworkProxy \
+ /usr/include/x86_64-linux-gnu/qt6/QtNetwork/qnetworkproxy.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtNetwork/qhostaddress.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtNetwork/qabstractsocket.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtNetwork/qnetworkrequest.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtNetwork/QSslError \
+ /usr/include/x86_64-linux-gnu/qt6/QtNetwork/qsslerror.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtNetwork/qsslcertificate.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtCore/qcryptographichash.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtCore/qdatetime.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtCore/qcalendar.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtCore/qlocale.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtNetwork/qssl.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtCore/QFlags \
+ /usr/include/x86_64-linux-gnu/qt6/QtCore/qflags.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtNetwork/QSslConfiguration \
+ /usr/include/x86_64-linux-gnu/qt6/QtNetwork/qsslconfiguration.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtNetwork/qsslsocket.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtNetwork/qtcpsocket.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtNetwork/qsslerror.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtWebSockets/qwebsockets_global.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtWebSockets/qtwebsocketsexports.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtWebSockets/qwebsocketprotocol.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtCore/QTimer \
+ /usr/include/x86_64-linux-gnu/qt6/QtCore/qtimer.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtCore/qbasictimer.h \
  /media/program/data_drive/MYAPPLICATIONS/QTradingView/QTradingView_autogen/EWIEGA46WW/moc_candleStickWick.cpp \
  /media/program/data_drive/MYAPPLICATIONS/QTradingView/QTradingView_autogen/EWIEGA46WW/../../candleStickWick.h \
  /usr/include/x86_64-linux-gnu/qt6/QtGui/QColor \

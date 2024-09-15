@@ -14,19 +14,18 @@
 #include <QFrame>
 #include <QGraphicsProxyWidget>
 
-graphTimeFrameNode::graphTimeFrameNode(QVector<double> &ohlcData, QDateTime &time_state, int id, bool isDynamic, int nodewidth)
-    : ohlcData(ohlcData), node_time_state(time_state), isNodeDynamic(isDynamic), node_id(id), node_width(nodewidth)
+graphTimeFrameNode::graphTimeFrameNode(QVector<double> &ohlcData, QDateTime &time_state, int id, bool isDynamic, int nodewidth, int __pixelsPerPip)
+    : ohlcData(ohlcData), node_time_state(time_state), isNodeDynamic(isDynamic), node_id(id), node_width(nodewidth), pixelsPerPip(__pixelsPerPip)
 {
     // create the internal state of the node
-    pixelsPerPip = 4;
     setScale();
     setRange();
     setNodeHeight();
     node_state = new graphTimeFrameNodeState();
     initializeState(); // initialize default values
     populateInternalState();
-
-    setAcceptHoverEvents(true);
+    // setPos(0,0);
+    setAcceptHoverEvents(false);
 }
 
 graphTimeFrameNode::~graphTimeFrameNode()
@@ -148,7 +147,7 @@ void graphTimeFrameNode::initializeState(){
             // bearish candle
             node_state->setCandleStickBodyPen(QPen(Qt::red));
             node_state->setCandleStickBodyColor(Qt::red);
-            node_state->setCandleStickWickColor(Qt::green);
+            node_state->setCandleStickWickColor(Qt::red);
         }
         // depending on the range of the prices, the geometry relative to the group item is to be changed.
         // set the dimensions of the graphTimeFrameNode boundingRect
@@ -221,6 +220,8 @@ void graphTimeFrameNode::populateInternalState()
     // Create the candlestick and add it to this node
     candle_stick = new candle(this, node_state);
     path_graph_point = new pathGraphPoint();
+    path_graph_point->setX(boundingRect().center().x());
+    path_graph_point->setY(boundingRect().center().y());
     addToGroup(candle_stick);
 }
 

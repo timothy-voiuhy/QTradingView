@@ -21,7 +21,7 @@ class graphTimeFrameNode :public QGraphicsItemGroup{
 
 
     public:
-        explicit graphTimeFrameNode(QVector<double> &ohlcData, QDateTime &time_state, int id = 0, bool isDynamic = false, int nodewidth = 10);
+        explicit graphTimeFrameNode(QVector<double> &ohlcData, QDateTime &time_state, int id = 0, bool isDynamic = false, int nodewidth = 10, int __pixelsPerPip = 4);
         ~graphTimeFrameNode();
 
         // group items

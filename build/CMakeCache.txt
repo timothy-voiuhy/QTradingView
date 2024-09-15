@@ -251,6 +251,9 @@ CMAKE_TAPI:FILEPATH=CMAKE_TAPI-NOTFOUND
 // Studio IDE projects all commands are done without /nologo.
 CMAKE_VERBOSE_MAKEFILE:BOOL=FALSE
 
+//Pick a version of Qt to use: 3 or 4
+DESIRED_QT_VERSION:STRING=3
+
 //Path to a file.
 OPENGL_EGL_INCLUDE_DIR:PATH=/usr/include
 
@@ -296,6 +299,12 @@ PKG_CONFIG_ARGN:STRING=
 //pkg-config executable
 PKG_CONFIG_EXECUTABLE:FILEPATH=/usr/bin/pkg-config
 
+//Path to a file.
+QT3_QGLOBAL_H_FILE:FILEPATH=/usr/local/include
+
+//Path to a file.
+QT4_QGLOBAL_H_FILE:FILEPATH=QT4_QGLOBAL_H_FILE-NOTFOUND
+
 //Additional directories where find(Qt6 ...) host Qt components
 // are searched
 QT_ADDITIONAL_HOST_PACKAGES_PREFIX_PATH:STRING=
@@ -306,6 +315,24 @@ QT_ADDITIONAL_PACKAGES_PREFIX_PATH:STRING=
 //The directory containing a CMake configuration file for QT.
 QT_DIR:PATH=/usr/lib/x86_64-linux-gnu/cmake/Qt6
 
+//path to Qt3 include directory
+QT_INCLUDE_DIR:PATH=QT_INCLUDE_DIR-NOTFOUND
+
+//Path to a program.
+QT_MOC_EXECUTABLE:FILEPATH=/usr/bin/moc
+
+//Path to a library.
+QT_QASSISTANTCLIENT_LIBRARY:FILEPATH=QT_QASSISTANTCLIENT_LIBRARY-NOTFOUND
+
+//Path to a program.
+QT_QMAKE_EXECUTABLE_FINDQT:FILEPATH=/usr/bin/qmake
+
+//Path to a library.
+QT_QT_LIBRARY:FILEPATH=QT_QT_LIBRARY-NOTFOUND
+
+//Path to a program.
+QT_UIC_EXECUTABLE:FILEPATH=/usr/bin/uic3
+
 //Value Computed by CMake
 QTradingView_BINARY_DIR:STATIC=/media/program/data_drive/MYAPPLICATIONS/QTradingView/build
 
@@ -314,6 +341,9 @@ QTradingView_IS_TOP_LEVEL:STATIC=ON
 
 //Value Computed by CMake
 QTradingView_SOURCE_DIR:STATIC=/media/program/data_drive/MYAPPLICATIONS/QTradingView
+
+//The directory containing a CMake configuration file for Qt5.
+Qt5_DIR:PATH=/usr/lib/x86_64-linux-gnu/cmake/Qt5
 
 //The directory containing a CMake configuration file for Qt6CoreTools.
 Qt6CoreTools_DIR:PATH=/usr/lib/x86_64-linux-gnu/cmake/Qt6CoreTools
@@ -366,6 +396,9 @@ Qt6QuickWidgets_DIR:PATH=/usr/lib/x86_64-linux-gnu/cmake/Qt6QuickWidgets
 //The directory containing a CMake configuration file for Qt6Quick.
 Qt6Quick_DIR:PATH=/usr/lib/x86_64-linux-gnu/cmake/Qt6Quick
 
+//The directory containing a CMake configuration file for Qt6Sql.
+Qt6Sql_DIR:PATH=/usr/lib/x86_64-linux-gnu/cmake/Qt6Sql
+
 //The directory containing a CMake configuration file for Qt6WebChannel.
 Qt6WebChannel_DIR:PATH=/usr/lib/x86_64-linux-gnu/cmake/Qt6WebChannel
 
@@ -377,6 +410,9 @@ Qt6WebEngineCore_DIR:PATH=/usr/lib/x86_64-linux-gnu/cmake/Qt6WebEngineCore
 
 //The directory containing a CMake configuration file for Qt6WebEngineWidgets.
 Qt6WebEngineWidgets_DIR:PATH=/usr/lib/x86_64-linux-gnu/cmake/Qt6WebEngineWidgets
+
+//The directory containing a CMake configuration file for Qt6WebSockets.
+Qt6WebSockets_DIR:PATH=/usr/lib/x86_64-linux-gnu/cmake/Qt6WebSockets
 
 //The directory containing a CMake configuration file for Qt6WidgetsTools.
 Qt6WidgetsTools_DIR:PATH=/usr/lib/x86_64-linux-gnu/cmake/Qt6WidgetsTools
@@ -636,6 +672,10 @@ PKG_XKB_xkbcommon_INCLUDEDIR:INTERNAL=
 PKG_XKB_xkbcommon_LIBDIR:INTERNAL=
 PKG_XKB_xkbcommon_PREFIX:INTERNAL=
 PKG_XKB_xkbcommon_VERSION:INTERNAL=
+//ADVANCED property for variable: QT3_QGLOBAL_H_FILE
+QT3_QGLOBAL_H_FILE-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: QT4_QGLOBAL_H_FILE
+QT4_QGLOBAL_H_FILE-ADVANCED:INTERNAL=1
 //Qt feature: abstractbutton (from target Qt6::Widgets)
 QT_FEATURE_abstractbutton:INTERNAL=ON
 //Qt feature: abstractslider (from target Qt6::Widgets)
@@ -1284,6 +1324,8 @@ QT_FEATURE_splashscreen:INTERNAL=ON
 QT_FEATURE_splitter:INTERNAL=ON
 //Qt feature: sql (from target Qt6::Core)
 QT_FEATURE_sql:INTERNAL=ON
+//Qt feature: sqlmodel (from target Qt6::Sql)
+QT_FEATURE_sqlmodel:INTERNAL=ON
 //Qt feature: sse2 (from target Qt6::Core)
 QT_FEATURE_sse2:INTERNAL=ON
 //Qt feature: sse3 (from target Qt6::Core)
@@ -1528,6 +1570,18 @@ QT_FEATURE_xmlstreamwriter:INTERNAL=ON
 QT_FEATURE_xrender:INTERNAL=OFF
 //Qt feature: zstd (from target Qt6::Core)
 QT_FEATURE_zstd:INTERNAL=ON
+//ADVANCED property for variable: QT_INCLUDE_DIR
+QT_INCLUDE_DIR-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: QT_MOC_EXECUTABLE
+QT_MOC_EXECUTABLE-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: QT_QASSISTANTCLIENT_LIBRARY
+QT_QASSISTANTCLIENT_LIBRARY-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: QT_QMAKE_EXECUTABLE_FINDQT
+QT_QMAKE_EXECUTABLE_FINDQT-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: QT_QT_LIBRARY
+QT_QT_LIBRARY-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: QT_UIC_EXECUTABLE
+QT_UIC_EXECUTABLE-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: Vulkan_GLSLANG_VALIDATOR_EXECUTABLE
 Vulkan_GLSLANG_VALIDATOR_EXECUTABLE-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: Vulkan_GLSLC_EXECUTABLE
