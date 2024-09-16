@@ -1,15 +1,18 @@
 #ifndef MAINWINDOW_H
 #define MAINWINDOW_H
 
+#include <QWidget>
+#include <QVBoxLayout>
 #include <QMainWindow>
 
-class GraphingView;
-class Graph;
+class GraphWindow;
 
 class MainWindow:public QMainWindow {
+    private:
+        QWidget *central_widget;
+        GraphWindow *graphwindow;
+        QVBoxLayout *main_layout;
     public:
-        GraphingView *graphingView;
-        Graph *GraphingScene;
         MainWindow(QWidget *parent = nullptr);
         ~MainWindow();
 };

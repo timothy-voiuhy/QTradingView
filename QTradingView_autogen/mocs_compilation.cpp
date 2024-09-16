@@ -3,3 +3,4 @@
 #include "EWIEGA46WW/moc_candleBody.cpp"
 #include "EWIEGA46WW/moc_candleStickDataStream.cpp"
 #include "EWIEGA46WW/moc_candleStickWick.cpp"
+#include "EWIEGA46WW/moc_graphWindow.cpp"

@@ -7,7 +7,7 @@ candleStickWick::candleStickWick(QGraphicsItem *parent, graphTimeFrameNodeState 
     : QGraphicsLineItem(parent), node_state(nodeState)
 {
     // Initialize the line based on the initial state
-    setLength(node_state->getCurCandleSickWickLength());
+    setLength(node_state->getCurCandleStickWickLength());
 }
 
 candleStickWick::~candleStickWick(){
@@ -31,7 +31,7 @@ void candleStickWick::paint(QPainter *painter, const QStyleOptionGraphicsItem *o
 
 void candleStickWick::setLength(qreal newLength) {
     // Only update if the new length is greater than the current length
-    if (newLength > node_state->getCurCandleSickWickLength()) {
+    if (newLength > node_state->getCurCandleStickWickLength()) {
         QLineF currentLine = line();
         QPointF bodyCenter = QPointF(currentLine.x1(), node_state->getOpen());
         

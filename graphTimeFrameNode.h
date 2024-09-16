@@ -8,7 +8,9 @@
 
 class pathGraphPoint;
 class graphTimeFrameNodeState;
-class candle;
+// class candle;
+class candleBody;
+class candleStickWick;
 
 class graphTimeFrameNode :public QGraphicsItemGroup{
 
@@ -25,9 +27,11 @@ class graphTimeFrameNode :public QGraphicsItemGroup{
         ~graphTimeFrameNode();
 
         // group items
-        candle *candle_stick;
+        // candle *candle_stick;
         pathGraphPoint *path_graph_point;
-
+        QRectF bounding_rect;
+        candleBody *candle_stick_body;
+        candleStickWick *candle_stick_wick;
         graphTimeFrameNodeState *getgraphTimeFrameNodeState();
         pathGraphPoint *getPathGraphPoint() const;
         QRectF boundingRect() const override;

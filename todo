@@ -1,0 +1,4 @@
+new positioning system:
+pass the previous positions of the previos node and the next node shall depend on these to positionn its self.
+try to get the open position:
+highposition - openPosi// 

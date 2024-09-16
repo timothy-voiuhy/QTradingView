@@ -27,11 +27,7 @@ bool dbManager::openDB()
         qDebug() << "Error: connection with database fail" << db.lastError().text();
         return false;
     }
-    else
-    {
-        qDebug() << "Database: connection ok";
-        return true;
-    }
+    return true;
 }
 
 void dbManager::closeDB()
@@ -151,7 +147,7 @@ QVector<QPair<QVector<double>, QDateTime>> dbManager::loadData(int startCandleID
     }
 
     QSqlQuery query;
-    query.prepare(QString("SELECT Open, High, Low, Close, Date FROM %1 WHERE id BETWEEN :startID AND :endID").arg(tablename));
+    query.prepare(QString("SELECT Open, High, Low, Close, Date FROM %1 WHERE id BETWEEN :startID AND :endID ORDER BY id DESC").arg(tablename));
     query.bindValue(":startID", startCandleID);
     query.bindValue(":endID", endCandleID);
 

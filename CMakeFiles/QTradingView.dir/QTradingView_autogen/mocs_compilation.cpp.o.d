@@ -433,4 +433,12 @@ CMakeFiles/QTradingView.dir/QTradingView_autogen/mocs_compilation.cpp.o: \
  /usr/include/x86_64-linux-gnu/qt6/QtCore/qpoint.h \
  /usr/include/x86_64-linux-gnu/qt6/QtCore/QLineF \
  /usr/include/x86_64-linux-gnu/qt6/QtCore/qline.h \
- /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QGraphicsLineItem
+ /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QGraphicsLineItem \
+ /media/program/data_drive/MYAPPLICATIONS/QTradingView/QTradingView_autogen/EWIEGA46WW/moc_graphWindow.cpp \
+ /media/program/data_drive/MYAPPLICATIONS/QTradingView/QTradingView_autogen/EWIEGA46WW/../../graphWindow.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QMainWindow \
+ /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qmainwindow.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qtabwidget.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QSlider \
+ /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qslider.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qabstractslider.h

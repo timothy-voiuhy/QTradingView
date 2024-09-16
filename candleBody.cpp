@@ -7,7 +7,6 @@ candleBody::candleBody(QGraphicsItem *parent, graphTimeFrameNodeState *nodeState
     : QGraphicsRectItem(parent), node_state(nodeState), m_isHighlighted(false)
 {
     // Initialize the rectangle based on the node state
-    // setPos(node_state.getCurCandleStickBody)
     setRect(0, node_state->getCurCandleStickBodyTopPosition().y(), node_state->getCurCandleStickBodyWidth(), node_state->getCurCandleStickBodyLength());
 }
 

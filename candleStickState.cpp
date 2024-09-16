@@ -69,7 +69,7 @@ int graphTimeFrameNodeState::getPrevCandleStickLength() const {
     return prevCandleStickWickLength;
 }
 
-int graphTimeFrameNodeState::getCurCandleSickWickLength() const {
+int graphTimeFrameNodeState::getCurCandleStickWickLength() const {
     return curCandleSickWickLength;
 }
 
@@ -220,4 +220,9 @@ QVector<double> graphTimeFrameNodeState::getOHLCdata()
 {
     QVector<double> ohlc_data = {open, high, low, close};
     return ohlc_data;
+}
+
+QDateTime graphTimeFrameNodeState::getCandleDateTime()
+{
+    return timeState;
 }

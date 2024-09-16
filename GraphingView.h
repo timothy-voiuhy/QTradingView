@@ -13,7 +13,12 @@ public:
     explicit GraphingView(QWidget *parent = nullptr);
     ~GraphingView();
 
+public slots:
+    void setHorizontalScale(int value);
+    void setVerticalScale(int value);
+
 protected:
+    double horizontalScaleFactor, verticalScaleFactor;
     void wheelEvent(QWheelEvent *event) override;
     void mousePressEvent(QMouseEvent *event) override;
     void mouseMoveEvent(QMouseEvent *event) override;

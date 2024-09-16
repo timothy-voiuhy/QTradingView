@@ -118,24 +118,10 @@ CMakeFiles/QTradingView.dir/mainwindow.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/QTradingView.dir/mainwindow.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /media/program/data_drive/MYAPPLICATIONS/QTradingView/mainwindow.cpp -o CMakeFiles/QTradingView.dir/mainwindow.cpp.s
 
-CMakeFiles/QTradingView.dir/candlestick.cpp.o: CMakeFiles/QTradingView.dir/flags.make
-CMakeFiles/QTradingView.dir/candlestick.cpp.o: candlestick.cpp
-CMakeFiles/QTradingView.dir/candlestick.cpp.o: CMakeFiles/QTradingView.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/media/program/data_drive/MYAPPLICATIONS/QTradingView/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/QTradingView.dir/candlestick.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/QTradingView.dir/candlestick.cpp.o -MF CMakeFiles/QTradingView.dir/candlestick.cpp.o.d -o CMakeFiles/QTradingView.dir/candlestick.cpp.o -c /media/program/data_drive/MYAPPLICATIONS/QTradingView/candlestick.cpp
-
-CMakeFiles/QTradingView.dir/candlestick.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/QTradingView.dir/candlestick.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /media/program/data_drive/MYAPPLICATIONS/QTradingView/candlestick.cpp > CMakeFiles/QTradingView.dir/candlestick.cpp.i
-
-CMakeFiles/QTradingView.dir/candlestick.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/QTradingView.dir/candlestick.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /media/program/data_drive/MYAPPLICATIONS/QTradingView/candlestick.cpp -o CMakeFiles/QTradingView.dir/candlestick.cpp.s
-
 CMakeFiles/QTradingView.dir/axes.cpp.o: CMakeFiles/QTradingView.dir/flags.make
 CMakeFiles/QTradingView.dir/axes.cpp.o: axes.cpp
 CMakeFiles/QTradingView.dir/axes.cpp.o: CMakeFiles/QTradingView.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/media/program/data_drive/MYAPPLICATIONS/QTradingView/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/QTradingView.dir/axes.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/media/program/data_drive/MYAPPLICATIONS/QTradingView/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/QTradingView.dir/axes.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/QTradingView.dir/axes.cpp.o -MF CMakeFiles/QTradingView.dir/axes.cpp.o.d -o CMakeFiles/QTradingView.dir/axes.cpp.o -c /media/program/data_drive/MYAPPLICATIONS/QTradingView/axes.cpp
 
 CMakeFiles/QTradingView.dir/axes.cpp.i: cmake_force
@@ -149,7 +135,7 @@ CMakeFiles/QTradingView.dir/axes.cpp.s: cmake_force
 CMakeFiles/QTradingView.dir/graphTimeFrameNode.cpp.o: CMakeFiles/QTradingView.dir/flags.make
 CMakeFiles/QTradingView.dir/graphTimeFrameNode.cpp.o: graphTimeFrameNode.cpp
 CMakeFiles/QTradingView.dir/graphTimeFrameNode.cpp.o: CMakeFiles/QTradingView.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/media/program/data_drive/MYAPPLICATIONS/QTradingView/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/QTradingView.dir/graphTimeFrameNode.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/media/program/data_drive/MYAPPLICATIONS/QTradingView/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/QTradingView.dir/graphTimeFrameNode.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/QTradingView.dir/graphTimeFrameNode.cpp.o -MF CMakeFiles/QTradingView.dir/graphTimeFrameNode.cpp.o.d -o CMakeFiles/QTradingView.dir/graphTimeFrameNode.cpp.o -c /media/program/data_drive/MYAPPLICATIONS/QTradingView/graphTimeFrameNode.cpp
 
 CMakeFiles/QTradingView.dir/graphTimeFrameNode.cpp.i: cmake_force
@@ -163,7 +149,7 @@ CMakeFiles/QTradingView.dir/graphTimeFrameNode.cpp.s: cmake_force
 CMakeFiles/QTradingView.dir/candleBody.cpp.o: CMakeFiles/QTradingView.dir/flags.make
 CMakeFiles/QTradingView.dir/candleBody.cpp.o: candleBody.cpp
 CMakeFiles/QTradingView.dir/candleBody.cpp.o: CMakeFiles/QTradingView.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/media/program/data_drive/MYAPPLICATIONS/QTradingView/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/QTradingView.dir/candleBody.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/media/program/data_drive/MYAPPLICATIONS/QTradingView/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/QTradingView.dir/candleBody.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/QTradingView.dir/candleBody.cpp.o -MF CMakeFiles/QTradingView.dir/candleBody.cpp.o.d -o CMakeFiles/QTradingView.dir/candleBody.cpp.o -c /media/program/data_drive/MYAPPLICATIONS/QTradingView/candleBody.cpp
 
 CMakeFiles/QTradingView.dir/candleBody.cpp.i: cmake_force
@@ -177,7 +163,7 @@ CMakeFiles/QTradingView.dir/candleBody.cpp.s: cmake_force
 CMakeFiles/QTradingView.dir/candleStickState.cpp.o: CMakeFiles/QTradingView.dir/flags.make
 CMakeFiles/QTradingView.dir/candleStickState.cpp.o: candleStickState.cpp
 CMakeFiles/QTradingView.dir/candleStickState.cpp.o: CMakeFiles/QTradingView.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/media/program/data_drive/MYAPPLICATIONS/QTradingView/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/QTradingView.dir/candleStickState.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/media/program/data_drive/MYAPPLICATIONS/QTradingView/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/QTradingView.dir/candleStickState.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/QTradingView.dir/candleStickState.cpp.o -MF CMakeFiles/QTradingView.dir/candleStickState.cpp.o.d -o CMakeFiles/QTradingView.dir/candleStickState.cpp.o -c /media/program/data_drive/MYAPPLICATIONS/QTradingView/candleStickState.cpp
 
 CMakeFiles/QTradingView.dir/candleStickState.cpp.i: cmake_force
@@ -191,7 +177,7 @@ CMakeFiles/QTradingView.dir/candleStickState.cpp.s: cmake_force
 CMakeFiles/QTradingView.dir/pathGraphPoint.cpp.o: CMakeFiles/QTradingView.dir/flags.make
 CMakeFiles/QTradingView.dir/pathGraphPoint.cpp.o: pathGraphPoint.cpp
 CMakeFiles/QTradingView.dir/pathGraphPoint.cpp.o: CMakeFiles/QTradingView.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/media/program/data_drive/MYAPPLICATIONS/QTradingView/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/QTradingView.dir/pathGraphPoint.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/media/program/data_drive/MYAPPLICATIONS/QTradingView/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/QTradingView.dir/pathGraphPoint.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/QTradingView.dir/pathGraphPoint.cpp.o -MF CMakeFiles/QTradingView.dir/pathGraphPoint.cpp.o.d -o CMakeFiles/QTradingView.dir/pathGraphPoint.cpp.o -c /media/program/data_drive/MYAPPLICATIONS/QTradingView/pathGraphPoint.cpp
 
 CMakeFiles/QTradingView.dir/pathGraphPoint.cpp.i: cmake_force
@@ -205,7 +191,7 @@ CMakeFiles/QTradingView.dir/pathGraphPoint.cpp.s: cmake_force
 CMakeFiles/QTradingView.dir/candleStickWick.cpp.o: CMakeFiles/QTradingView.dir/flags.make
 CMakeFiles/QTradingView.dir/candleStickWick.cpp.o: candleStickWick.cpp
 CMakeFiles/QTradingView.dir/candleStickWick.cpp.o: CMakeFiles/QTradingView.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/media/program/data_drive/MYAPPLICATIONS/QTradingView/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/QTradingView.dir/candleStickWick.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/media/program/data_drive/MYAPPLICATIONS/QTradingView/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/QTradingView.dir/candleStickWick.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/QTradingView.dir/candleStickWick.cpp.o -MF CMakeFiles/QTradingView.dir/candleStickWick.cpp.o.d -o CMakeFiles/QTradingView.dir/candleStickWick.cpp.o -c /media/program/data_drive/MYAPPLICATIONS/QTradingView/candleStickWick.cpp
 
 CMakeFiles/QTradingView.dir/candleStickWick.cpp.i: cmake_force
@@ -219,7 +205,7 @@ CMakeFiles/QTradingView.dir/candleStickWick.cpp.s: cmake_force
 CMakeFiles/QTradingView.dir/candleStickDataStream.cpp.o: CMakeFiles/QTradingView.dir/flags.make
 CMakeFiles/QTradingView.dir/candleStickDataStream.cpp.o: candleStickDataStream.cpp
 CMakeFiles/QTradingView.dir/candleStickDataStream.cpp.o: CMakeFiles/QTradingView.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/media/program/data_drive/MYAPPLICATIONS/QTradingView/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object CMakeFiles/QTradingView.dir/candleStickDataStream.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/media/program/data_drive/MYAPPLICATIONS/QTradingView/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/QTradingView.dir/candleStickDataStream.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/QTradingView.dir/candleStickDataStream.cpp.o -MF CMakeFiles/QTradingView.dir/candleStickDataStream.cpp.o.d -o CMakeFiles/QTradingView.dir/candleStickDataStream.cpp.o -c /media/program/data_drive/MYAPPLICATIONS/QTradingView/candleStickDataStream.cpp
 
 CMakeFiles/QTradingView.dir/candleStickDataStream.cpp.i: cmake_force
@@ -233,7 +219,7 @@ CMakeFiles/QTradingView.dir/candleStickDataStream.cpp.s: cmake_force
 CMakeFiles/QTradingView.dir/graph.cpp.o: CMakeFiles/QTradingView.dir/flags.make
 CMakeFiles/QTradingView.dir/graph.cpp.o: graph.cpp
 CMakeFiles/QTradingView.dir/graph.cpp.o: CMakeFiles/QTradingView.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/media/program/data_drive/MYAPPLICATIONS/QTradingView/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object CMakeFiles/QTradingView.dir/graph.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/media/program/data_drive/MYAPPLICATIONS/QTradingView/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object CMakeFiles/QTradingView.dir/graph.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/QTradingView.dir/graph.cpp.o -MF CMakeFiles/QTradingView.dir/graph.cpp.o.d -o CMakeFiles/QTradingView.dir/graph.cpp.o -c /media/program/data_drive/MYAPPLICATIONS/QTradingView/graph.cpp
 
 CMakeFiles/QTradingView.dir/graph.cpp.i: cmake_force
@@ -247,7 +233,7 @@ CMakeFiles/QTradingView.dir/graph.cpp.s: cmake_force
 CMakeFiles/QTradingView.dir/dbManager.cpp.o: CMakeFiles/QTradingView.dir/flags.make
 CMakeFiles/QTradingView.dir/dbManager.cpp.o: dbManager.cpp
 CMakeFiles/QTradingView.dir/dbManager.cpp.o: CMakeFiles/QTradingView.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/media/program/data_drive/MYAPPLICATIONS/QTradingView/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building CXX object CMakeFiles/QTradingView.dir/dbManager.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/media/program/data_drive/MYAPPLICATIONS/QTradingView/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object CMakeFiles/QTradingView.dir/dbManager.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/QTradingView.dir/dbManager.cpp.o -MF CMakeFiles/QTradingView.dir/dbManager.cpp.o.d -o CMakeFiles/QTradingView.dir/dbManager.cpp.o -c /media/program/data_drive/MYAPPLICATIONS/QTradingView/dbManager.cpp
 
 CMakeFiles/QTradingView.dir/dbManager.cpp.i: cmake_force
@@ -261,7 +247,7 @@ CMakeFiles/QTradingView.dir/dbManager.cpp.s: cmake_force
 CMakeFiles/QTradingView.dir/GraphingView.cpp.o: CMakeFiles/QTradingView.dir/flags.make
 CMakeFiles/QTradingView.dir/GraphingView.cpp.o: GraphingView.cpp
 CMakeFiles/QTradingView.dir/GraphingView.cpp.o: CMakeFiles/QTradingView.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/media/program/data_drive/MYAPPLICATIONS/QTradingView/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building CXX object CMakeFiles/QTradingView.dir/GraphingView.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/media/program/data_drive/MYAPPLICATIONS/QTradingView/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building CXX object CMakeFiles/QTradingView.dir/GraphingView.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/QTradingView.dir/GraphingView.cpp.o -MF CMakeFiles/QTradingView.dir/GraphingView.cpp.o.d -o CMakeFiles/QTradingView.dir/GraphingView.cpp.o -c /media/program/data_drive/MYAPPLICATIONS/QTradingView/GraphingView.cpp
 
 CMakeFiles/QTradingView.dir/GraphingView.cpp.i: cmake_force
@@ -272,12 +258,25 @@ CMakeFiles/QTradingView.dir/GraphingView.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/QTradingView.dir/GraphingView.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /media/program/data_drive/MYAPPLICATIONS/QTradingView/GraphingView.cpp -o CMakeFiles/QTradingView.dir/GraphingView.cpp.s
 
+CMakeFiles/QTradingView.dir/graphWindow.cpp.o: CMakeFiles/QTradingView.dir/flags.make
+CMakeFiles/QTradingView.dir/graphWindow.cpp.o: graphWindow.cpp
+CMakeFiles/QTradingView.dir/graphWindow.cpp.o: CMakeFiles/QTradingView.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/media/program/data_drive/MYAPPLICATIONS/QTradingView/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building CXX object CMakeFiles/QTradingView.dir/graphWindow.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/QTradingView.dir/graphWindow.cpp.o -MF CMakeFiles/QTradingView.dir/graphWindow.cpp.o.d -o CMakeFiles/QTradingView.dir/graphWindow.cpp.o -c /media/program/data_drive/MYAPPLICATIONS/QTradingView/graphWindow.cpp
+
+CMakeFiles/QTradingView.dir/graphWindow.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/QTradingView.dir/graphWindow.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /media/program/data_drive/MYAPPLICATIONS/QTradingView/graphWindow.cpp > CMakeFiles/QTradingView.dir/graphWindow.cpp.i
+
+CMakeFiles/QTradingView.dir/graphWindow.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/QTradingView.dir/graphWindow.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /media/program/data_drive/MYAPPLICATIONS/QTradingView/graphWindow.cpp -o CMakeFiles/QTradingView.dir/graphWindow.cpp.s
+
 # Object files for target QTradingView
 QTradingView_OBJECTS = \
 "CMakeFiles/QTradingView.dir/QTradingView_autogen/mocs_compilation.cpp.o" \
 "CMakeFiles/QTradingView.dir/main.cpp.o" \
 "CMakeFiles/QTradingView.dir/mainwindow.cpp.o" \
-"CMakeFiles/QTradingView.dir/candlestick.cpp.o" \
 "CMakeFiles/QTradingView.dir/axes.cpp.o" \
 "CMakeFiles/QTradingView.dir/graphTimeFrameNode.cpp.o" \
 "CMakeFiles/QTradingView.dir/candleBody.cpp.o" \
@@ -287,7 +286,8 @@ QTradingView_OBJECTS = \
 "CMakeFiles/QTradingView.dir/candleStickDataStream.cpp.o" \
 "CMakeFiles/QTradingView.dir/graph.cpp.o" \
 "CMakeFiles/QTradingView.dir/dbManager.cpp.o" \
-"CMakeFiles/QTradingView.dir/GraphingView.cpp.o"
+"CMakeFiles/QTradingView.dir/GraphingView.cpp.o" \
+"CMakeFiles/QTradingView.dir/graphWindow.cpp.o"
 
 # External object files for target QTradingView
 QTradingView_EXTERNAL_OBJECTS =
@@ -295,7 +295,6 @@ QTradingView_EXTERNAL_OBJECTS =
 QTradingView: CMakeFiles/QTradingView.dir/QTradingView_autogen/mocs_compilation.cpp.o
 QTradingView: CMakeFiles/QTradingView.dir/main.cpp.o
 QTradingView: CMakeFiles/QTradingView.dir/mainwindow.cpp.o
-QTradingView: CMakeFiles/QTradingView.dir/candlestick.cpp.o
 QTradingView: CMakeFiles/QTradingView.dir/axes.cpp.o
 QTradingView: CMakeFiles/QTradingView.dir/graphTimeFrameNode.cpp.o
 QTradingView: CMakeFiles/QTradingView.dir/candleBody.cpp.o
@@ -306,6 +305,7 @@ QTradingView: CMakeFiles/QTradingView.dir/candleStickDataStream.cpp.o
 QTradingView: CMakeFiles/QTradingView.dir/graph.cpp.o
 QTradingView: CMakeFiles/QTradingView.dir/dbManager.cpp.o
 QTradingView: CMakeFiles/QTradingView.dir/GraphingView.cpp.o
+QTradingView: CMakeFiles/QTradingView.dir/graphWindow.cpp.o
 QTradingView: CMakeFiles/QTradingView.dir/build.make
 QTradingView: /usr/lib/x86_64-linux-gnu/libQt6WebEngineWidgets.so.6.4.2
 QTradingView: lib/QScintilla/src/libqscintilla2_qt6.so.15.2

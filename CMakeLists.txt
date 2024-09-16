@@ -21,8 +21,6 @@ set(PROJECT_SOURCES
         main.cpp
         mainwindow.cpp
         mainwindow.h 
-        candlestick.h
-        candlestick.cpp
         axes.h
         axes.cpp
         graphTimeFrameNode.h
@@ -43,6 +41,8 @@ set(PROJECT_SOURCES
         dbManager.h 
         GraphingView.cpp 
         GraphingView.h
+        graphWindow.h 
+        graphWindow.cpp 
 )
 
 if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)

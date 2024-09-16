@@ -462,12 +462,6 @@
 			null
 		],
 		[
-			"/media/program/data_drive/MYAPPLICATIONS/QTradingView/candlestick.h",
-			"MU",
-			"EWIEGA46WW/moc_candlestick.cpp",
-			null
-		],
-		[
 			"/media/program/data_drive/MYAPPLICATIONS/QTradingView/dbManager.h",
 			"MU",
 			"EWIEGA46WW/moc_dbManager.cpp",
@@ -483,6 +477,12 @@
 			"/media/program/data_drive/MYAPPLICATIONS/QTradingView/graphTimeFrameNode.h",
 			"MU",
 			"EWIEGA46WW/moc_graphTimeFrameNode.cpp",
+			null
+		],
+		[
+			"/media/program/data_drive/MYAPPLICATIONS/QTradingView/graphWindow.h",
+			"MU",
+			"EWIEGA46WW/moc_graphWindow.cpp",
 			null
 		],
 		[
@@ -614,11 +614,6 @@
 			null
 		],
 		[
-			"/media/program/data_drive/MYAPPLICATIONS/QTradingView/candlestick.cpp",
-			"MU",
-			null
-		],
-		[
 			"/media/program/data_drive/MYAPPLICATIONS/QTradingView/dbManager.cpp",
 			"MU",
 			null
@@ -630,6 +625,11 @@
 		],
 		[
 			"/media/program/data_drive/MYAPPLICATIONS/QTradingView/graphTimeFrameNode.cpp",
+			"MU",
+			null
+		],
+		[
+			"/media/program/data_drive/MYAPPLICATIONS/QTradingView/graphWindow.cpp",
 			"MU",
 			null
 		],

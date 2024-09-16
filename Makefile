@@ -381,30 +381,6 @@ candleStickWick.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/QTradingView.dir/build.make CMakeFiles/QTradingView.dir/candleStickWick.cpp.s
 .PHONY : candleStickWick.cpp.s
 
-candlestick.o: candlestick.cpp.o
-.PHONY : candlestick.o
-
-# target to build an object file
-candlestick.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/QTradingView.dir/build.make CMakeFiles/QTradingView.dir/candlestick.cpp.o
-.PHONY : candlestick.cpp.o
-
-candlestick.i: candlestick.cpp.i
-.PHONY : candlestick.i
-
-# target to preprocess a source file
-candlestick.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/QTradingView.dir/build.make CMakeFiles/QTradingView.dir/candlestick.cpp.i
-.PHONY : candlestick.cpp.i
-
-candlestick.s: candlestick.cpp.s
-.PHONY : candlestick.s
-
-# target to generate assembly for a file
-candlestick.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/QTradingView.dir/build.make CMakeFiles/QTradingView.dir/candlestick.cpp.s
-.PHONY : candlestick.cpp.s
-
 dbManager.o: dbManager.cpp.o
 .PHONY : dbManager.o
 
@@ -476,6 +452,30 @@ graphTimeFrameNode.s: graphTimeFrameNode.cpp.s
 graphTimeFrameNode.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/QTradingView.dir/build.make CMakeFiles/QTradingView.dir/graphTimeFrameNode.cpp.s
 .PHONY : graphTimeFrameNode.cpp.s
+
+graphWindow.o: graphWindow.cpp.o
+.PHONY : graphWindow.o
+
+# target to build an object file
+graphWindow.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/QTradingView.dir/build.make CMakeFiles/QTradingView.dir/graphWindow.cpp.o
+.PHONY : graphWindow.cpp.o
+
+graphWindow.i: graphWindow.cpp.i
+.PHONY : graphWindow.i
+
+# target to preprocess a source file
+graphWindow.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/QTradingView.dir/build.make CMakeFiles/QTradingView.dir/graphWindow.cpp.i
+.PHONY : graphWindow.cpp.i
+
+graphWindow.s: graphWindow.cpp.s
+.PHONY : graphWindow.s
+
+# target to generate assembly for a file
+graphWindow.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/QTradingView.dir/build.make CMakeFiles/QTradingView.dir/graphWindow.cpp.s
+.PHONY : graphWindow.cpp.s
 
 main.o: main.cpp.o
 .PHONY : main.o
@@ -586,9 +586,6 @@ help:
 	@echo "... candleStickWick.o"
 	@echo "... candleStickWick.i"
 	@echo "... candleStickWick.s"
-	@echo "... candlestick.o"
-	@echo "... candlestick.i"
-	@echo "... candlestick.s"
 	@echo "... dbManager.o"
 	@echo "... dbManager.i"
 	@echo "... dbManager.s"
@@ -598,6 +595,9 @@ help:
 	@echo "... graphTimeFrameNode.o"
 	@echo "... graphTimeFrameNode.i"
 	@echo "... graphTimeFrameNode.s"
+	@echo "... graphWindow.o"
+	@echo "... graphWindow.i"
+	@echo "... graphWindow.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"

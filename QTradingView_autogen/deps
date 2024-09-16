@@ -15,14 +15,14 @@ QTradingView_autogen/timestamp: \
 	/media/program/data_drive/MYAPPLICATIONS/QTradingView/candleStickState.h \
 	/media/program/data_drive/MYAPPLICATIONS/QTradingView/candleStickWick.cpp \
 	/media/program/data_drive/MYAPPLICATIONS/QTradingView/candleStickWick.h \
-	/media/program/data_drive/MYAPPLICATIONS/QTradingView/candlestick.cpp \
-	/media/program/data_drive/MYAPPLICATIONS/QTradingView/candlestick.h \
 	/media/program/data_drive/MYAPPLICATIONS/QTradingView/dbManager.cpp \
 	/media/program/data_drive/MYAPPLICATIONS/QTradingView/dbManager.h \
 	/media/program/data_drive/MYAPPLICATIONS/QTradingView/graph.cpp \
 	/media/program/data_drive/MYAPPLICATIONS/QTradingView/graph.h \
 	/media/program/data_drive/MYAPPLICATIONS/QTradingView/graphTimeFrameNode.cpp \
 	/media/program/data_drive/MYAPPLICATIONS/QTradingView/graphTimeFrameNode.h \
+	/media/program/data_drive/MYAPPLICATIONS/QTradingView/graphWindow.cpp \
+	/media/program/data_drive/MYAPPLICATIONS/QTradingView/graphWindow.h \
 	/media/program/data_drive/MYAPPLICATIONS/QTradingView/main.cpp \
 	/media/program/data_drive/MYAPPLICATIONS/QTradingView/mainwindow.cpp \
 	/media/program/data_drive/MYAPPLICATIONS/QTradingView/mainwindow.h \
@@ -480,13 +480,19 @@ QTradingView_autogen/timestamp: \
 	/usr/include/x86_64-linux-gnu/qt6/QtWidgets/QGraphicsLineItem \
 	/usr/include/x86_64-linux-gnu/qt6/QtWidgets/QGraphicsRectItem \
 	/usr/include/x86_64-linux-gnu/qt6/QtWidgets/QGraphicsView \
+	/usr/include/x86_64-linux-gnu/qt6/QtWidgets/QMainWindow \
+	/usr/include/x86_64-linux-gnu/qt6/QtWidgets/QSlider \
 	/usr/include/x86_64-linux-gnu/qt6/QtWidgets/qabstractscrollarea.h \
+	/usr/include/x86_64-linux-gnu/qt6/QtWidgets/qabstractslider.h \
 	/usr/include/x86_64-linux-gnu/qt6/QtWidgets/qframe.h \
 	/usr/include/x86_64-linux-gnu/qt6/QtWidgets/qgraphicsitem.h \
 	/usr/include/x86_64-linux-gnu/qt6/QtWidgets/qgraphicsscene.h \
 	/usr/include/x86_64-linux-gnu/qt6/QtWidgets/qgraphicsview.h \
+	/usr/include/x86_64-linux-gnu/qt6/QtWidgets/qmainwindow.h \
 	/usr/include/x86_64-linux-gnu/qt6/QtWidgets/qscrollarea.h \
 	/usr/include/x86_64-linux-gnu/qt6/QtWidgets/qsizepolicy.h \
+	/usr/include/x86_64-linux-gnu/qt6/QtWidgets/qslider.h \
+	/usr/include/x86_64-linux-gnu/qt6/QtWidgets/qtabwidget.h \
 	/usr/include/x86_64-linux-gnu/qt6/QtWidgets/qtwidgets-config.h \
 	/usr/include/x86_64-linux-gnu/qt6/QtWidgets/qtwidgetsexports.h \
 	/usr/include/x86_64-linux-gnu/qt6/QtWidgets/qtwidgetsglobal.h \

@@ -1,26 +1,23 @@
-#include "GraphingView.h"
-#include <QGraphicsScene>
 #include <QMainWindow>
+#include <QWidget>
+#include <QVBoxLayout>
 #include "mainwindow.h"
-#include "axes.h"
-#include "graphTimeFrameNode.h"
-#include <QDateTime>
-#include <QVector>
-#include "graph.h"
+#include "graphWindow.h"
 
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
-{
-    // Create the scene and view
-    GraphingScene = new Graph(4, "EURUSD_D1");
-    graphingView = new GraphingView(this);
-    graphingView->setScene(GraphingScene);
-    setCentralWidget(graphingView);
+{   
+    central_widget = new QWidget();
+    setCentralWidget(central_widget);
+
+    main_layout = new QVBoxLayout();
+    central_widget->setLayout(main_layout);
+
+    graphwindow = new GraphWindow();
+    main_layout->addWidget(graphwindow);
+    
 }
 
 MainWindow::~MainWindow()
 {
-    // Clean up
-    delete GraphingScene;
-    delete graphingView;
 }

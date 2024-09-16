@@ -25,6 +25,7 @@ class Graph:public QGraphicsScene{
         void computeSceneRectDimensions();
         void populateNodes(bool batch = false);
         dbManager *db_manager;
+        double transformYCoordinate(double y);
         int numNodes;
     protected:
         int node_width, scene_width, scene_height;

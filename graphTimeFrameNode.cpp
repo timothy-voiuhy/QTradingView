@@ -1,6 +1,7 @@
 #include "graphTimeFrameNode.h"
 #include "candleStickState.h"
-#include "candlestick.h"
+// #include "candlestick.h"
+#include "candleBody.h"
 #include <QDateTime>
 #include <QVector>
 #include <QPainter>
@@ -24,8 +25,10 @@ graphTimeFrameNode::graphTimeFrameNode(QVector<double> &ohlcData, QDateTime &tim
     node_state = new graphTimeFrameNodeState();
     initializeState(); // initialize default values
     populateInternalState();
-    // setPos(0,0);
-    setAcceptHoverEvents(false);
+    bounding_rect.setTopLeft(QPoint(0, 0));
+    bounding_rect.setHeight(node_height);
+    bounding_rect.setWidth(node_width);
+    setAcceptHoverEvents(true);
 }
 
 graphTimeFrameNode::~graphTimeFrameNode()
@@ -43,7 +46,7 @@ pathGraphPoint *graphTimeFrameNode::getPathGraphPoint() const {
 
 QRectF graphTimeFrameNode::boundingRect() const
 {
-    return QRectF(0, 0, node_width, node_height);
+    return bounding_rect;
 }
 
 void graphTimeFrameNode::paint(QPainter *painter, const QStyleOptionGraphicsItem *option, QWidget *widget)
@@ -53,6 +56,8 @@ void graphTimeFrameNode::paint(QPainter *painter, const QStyleOptionGraphicsItem
 
     // The candlestick is a child item, so it will be drawn automatically
     // Draw the path_graph_point if needed
+    candle_stick_body->paint(painter, option, widget);
+    candle_stick_wick->paint(painter, option, widget);
     painter->drawPoint(path_graph_point->toPoint());
 }
 
@@ -86,7 +91,7 @@ QPointF graphTimeFrameNode::valueToPosition(double value) {
     double pixelDifference = pipsDifference * getPixelsPerPip();
     
     // Calculate the Y position (remember that screen coordinates increase downwards)
-    double y = pixelDifference; // Assuming top of the bounding rect is 0
+    double y = pixelDifference+node_state->getPrevCandleStickWickEndPositon().y(); // Assuming top of the bounding rect is 0
     
     // X position remains at the center of the bounding rect
     double x = node_width / 2; // Center of the node width
@@ -217,12 +222,11 @@ void graphTimeFrameNode::initializeState(){
 // this populates the internal components with all the data given to it by state parameter.
 void graphTimeFrameNode::populateInternalState()
 {
-    // Create the candlestick and add it to this node
-    candle_stick = new candle(this, node_state);
+    candle_stick_body = new candleBody(this, node_state);
+    candle_stick_wick = new candleStickWick(this, node_state);
     path_graph_point = new pathGraphPoint();
-    path_graph_point->setX(boundingRect().center().x());
-    path_graph_point->setY(boundingRect().center().y());
-    addToGroup(candle_stick);
+    addToGroup(candle_stick_body);
+    addToGroup(candle_stick_wick);
 }
 
 void graphTimeFrameNode::setPosition(qreal x, qreal y){
@@ -233,7 +237,7 @@ void graphTimeFrameNode::setPosition(qreal x, qreal y){
 
 void graphTimeFrameNode::mergeNode() {
     // Get the position of the candlestick
-    QPointF candlePos = candle_stick->pos();
+    QPointF candlePos = candle_stick_body->pos();
     
     // Set the x and y positions for the path_graph_point
     path_graph_point->setX(candlePos.x());
@@ -242,7 +246,6 @@ void graphTimeFrameNode::mergeNode() {
 
 void graphTimeFrameNode::hoverEnterEvent(QGraphicsSceneHoverEvent *event)
 {
-    std::cout << "hover event captured" << std::endl;
     QGraphicsScene *scene = this->scene();
     if (scene) {
         QPointF scenePos = mapToScene(event->pos());
@@ -250,11 +253,14 @@ void graphTimeFrameNode::hoverEnterEvent(QGraphicsSceneHoverEvent *event)
         // Create a QTextBrowser to display the information
         QTextBrowser *infoBrowser = new QTextBrowser();
         infoBrowser->setReadOnly(true);
-        infoBrowser->setText(QString("Open: %1<br>High: %2<br>Low: %3<br>Close: %4")
+        infoBrowser->setText(QString("Open: %1<br>High: %2<br>Low: %3<br>Close: %4<br>Date: %5<br>XPosition: %6<br>YPosition: %7")
                              .arg(node_state->getOpen())
                              .arg(node_state->getHigh())
                              .arg(node_state->getLow())
-                             .arg(node_state->getClose()));
+                             .arg(node_state->getClose())
+                             .arg(node_state->getCandleDateTime().toString())
+                             .arg(pos().x())
+                             .arg(pos().y()));
         
         // Set up the appearance of the info window
         infoBrowser->setStyleSheet("background-color: white; color: black; font-size: 10pt;");
@@ -279,7 +285,6 @@ void graphTimeFrameNode::hoverEnterEvent(QGraphicsSceneHoverEvent *event)
 
 void graphTimeFrameNode::hoverLeaveEvent(QGraphicsSceneHoverEvent *event)
 {
-    std::cout << "hover leave event captured" << std::endl;
     QGraphicsScene *scene = this->scene();
     if (scene) {
         // Retrieve the stored info window

@@ -73,7 +73,7 @@ class graphTimeFrameNodeState {
         QPointF getPrevCandleStickWickEndPositon() const;
 
         int getPrevCandleStickLength() const;
-        int getCurCandleSickWickLength() const;
+        int getCurCandleStickWickLength() const;
         int getPrevCandleStickWickLength() const;
         int getPrevCandleStickBodyLength() const;
         int getCurCandleStickBodyWidth() const;
@@ -106,6 +106,7 @@ class graphTimeFrameNodeState {
         void setPrevCandleStickWickEndPositon(const QPointF& position);
 
         QVector<double> getOHLCdata();
+        QDateTime getCandleDateTime();
 };
 
 #endif
