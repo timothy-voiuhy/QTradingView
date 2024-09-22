@@ -72,7 +72,6 @@ preinstall:
 
 # The main recursive "clean" target.
 clean: CMakeFiles/QTradingView.dir/clean
-clean: CMakeFiles/QTradingView_qmlimportscan.dir/clean
 clean: CMakeFiles/QTradingView_autogen_timestamp_deps.dir/clean
 clean: CMakeFiles/QTradingView_autogen.dir/clean
 .PHONY : clean
@@ -81,7 +80,6 @@ clean: CMakeFiles/QTradingView_autogen.dir/clean
 # Target rules for target CMakeFiles/QTradingView.dir
 
 # All Build rule for target.
-CMakeFiles/QTradingView.dir/all: CMakeFiles/QTradingView_qmlimportscan.dir/all
 CMakeFiles/QTradingView.dir/all: CMakeFiles/QTradingView_autogen_timestamp_deps.dir/all
 CMakeFiles/QTradingView.dir/all: CMakeFiles/QTradingView_autogen.dir/all
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/QTradingView.dir/build.make CMakeFiles/QTradingView.dir/depend
@@ -91,7 +89,7 @@ CMakeFiles/QTradingView.dir/all: CMakeFiles/QTradingView_autogen.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/QTradingView.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /media/program/data_drive/MYAPPLICATIONS/QTradingView/CMakeFiles 18
+	$(CMAKE_COMMAND) -E cmake_progress_start /media/program/data_drive/MYAPPLICATIONS/QTradingView/CMakeFiles 17
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/QTradingView.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /media/program/data_drive/MYAPPLICATIONS/QTradingView/CMakeFiles 0
 .PHONY : CMakeFiles/QTradingView.dir/rule
@@ -106,36 +104,10 @@ CMakeFiles/QTradingView.dir/clean:
 .PHONY : CMakeFiles/QTradingView.dir/clean
 
 #=============================================================================
-# Target rules for target CMakeFiles/QTradingView_qmlimportscan.dir
-
-# All Build rule for target.
-CMakeFiles/QTradingView_qmlimportscan.dir/all:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/QTradingView_qmlimportscan.dir/build.make CMakeFiles/QTradingView_qmlimportscan.dir/depend
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/QTradingView_qmlimportscan.dir/build.make CMakeFiles/QTradingView_qmlimportscan.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/media/program/data_drive/MYAPPLICATIONS/QTradingView/CMakeFiles --progress-num=18 "Built target QTradingView_qmlimportscan"
-.PHONY : CMakeFiles/QTradingView_qmlimportscan.dir/all
-
-# Build rule for subdir invocation for target.
-CMakeFiles/QTradingView_qmlimportscan.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /media/program/data_drive/MYAPPLICATIONS/QTradingView/CMakeFiles 1
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/QTradingView_qmlimportscan.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /media/program/data_drive/MYAPPLICATIONS/QTradingView/CMakeFiles 0
-.PHONY : CMakeFiles/QTradingView_qmlimportscan.dir/rule
-
-# Convenience name for target.
-QTradingView_qmlimportscan: CMakeFiles/QTradingView_qmlimportscan.dir/rule
-.PHONY : QTradingView_qmlimportscan
-
-# clean rule for target.
-CMakeFiles/QTradingView_qmlimportscan.dir/clean:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/QTradingView_qmlimportscan.dir/build.make CMakeFiles/QTradingView_qmlimportscan.dir/clean
-.PHONY : CMakeFiles/QTradingView_qmlimportscan.dir/clean
-
-#=============================================================================
 # Target rules for target CMakeFiles/QTradingView_autogen_timestamp_deps.dir
 
 # All Build rule for target.
-CMakeFiles/QTradingView_autogen_timestamp_deps.dir/all: CMakeFiles/QTradingView_qmlimportscan.dir/all
+CMakeFiles/QTradingView_autogen_timestamp_deps.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/QTradingView_autogen_timestamp_deps.dir/build.make CMakeFiles/QTradingView_autogen_timestamp_deps.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/QTradingView_autogen_timestamp_deps.dir/build.make CMakeFiles/QTradingView_autogen_timestamp_deps.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/media/program/data_drive/MYAPPLICATIONS/QTradingView/CMakeFiles --progress-num= "Built target QTradingView_autogen_timestamp_deps"
@@ -143,7 +115,7 @@ CMakeFiles/QTradingView_autogen_timestamp_deps.dir/all: CMakeFiles/QTradingView_
 
 # Build rule for subdir invocation for target.
 CMakeFiles/QTradingView_autogen_timestamp_deps.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /media/program/data_drive/MYAPPLICATIONS/QTradingView/CMakeFiles 1
+	$(CMAKE_COMMAND) -E cmake_progress_start /media/program/data_drive/MYAPPLICATIONS/QTradingView/CMakeFiles 0
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/QTradingView_autogen_timestamp_deps.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /media/program/data_drive/MYAPPLICATIONS/QTradingView/CMakeFiles 0
 .PHONY : CMakeFiles/QTradingView_autogen_timestamp_deps.dir/rule
@@ -169,7 +141,7 @@ CMakeFiles/QTradingView_autogen.dir/all: CMakeFiles/QTradingView_autogen_timesta
 
 # Build rule for subdir invocation for target.
 CMakeFiles/QTradingView_autogen.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /media/program/data_drive/MYAPPLICATIONS/QTradingView/CMakeFiles 2
+	$(CMAKE_COMMAND) -E cmake_progress_start /media/program/data_drive/MYAPPLICATIONS/QTradingView/CMakeFiles 1
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/QTradingView_autogen.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /media/program/data_drive/MYAPPLICATIONS/QTradingView/CMakeFiles 0
 .PHONY : CMakeFiles/QTradingView_autogen.dir/rule

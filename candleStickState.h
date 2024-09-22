@@ -107,6 +107,8 @@ class graphTimeFrameNodeState {
 
         QVector<double> getOHLCdata();
         QDateTime getCandleDateTime();
+        bool isBull();
+        bool isfirst;
 };
 
 #endif

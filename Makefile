@@ -175,19 +175,6 @@ QTradingView/fast:
 .PHONY : QTradingView/fast
 
 #=============================================================================
-# Target rules for targets named QTradingView_qmlimportscan
-
-# Build rule for target.
-QTradingView_qmlimportscan: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 QTradingView_qmlimportscan
-.PHONY : QTradingView_qmlimportscan
-
-# fast build rule for target.
-QTradingView_qmlimportscan/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/QTradingView_qmlimportscan.dir/build.make CMakeFiles/QTradingView_qmlimportscan.dir/build
-.PHONY : QTradingView_qmlimportscan/fast
-
-#=============================================================================
 # Target rules for targets named QTradingView_autogen_timestamp_deps
 
 # Build rule for target.
@@ -563,7 +550,6 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... QTradingView_autogen"
 	@echo "... QTradingView_autogen_timestamp_deps"
-	@echo "... QTradingView_qmlimportscan"
 	@echo "... QTradingView"
 	@echo "... GraphingView.o"
 	@echo "... GraphingView.i"

@@ -15,8 +15,8 @@
 #include <QFrame>
 #include <QGraphicsProxyWidget>
 
-graphTimeFrameNode::graphTimeFrameNode(QVector<double> &ohlcData, QDateTime &time_state, int id, bool isDynamic, int nodewidth, int __pixelsPerPip)
-    : ohlcData(ohlcData), node_time_state(time_state), isNodeDynamic(isDynamic), node_id(id), node_width(nodewidth), pixelsPerPip(__pixelsPerPip)
+graphTimeFrameNode::graphTimeFrameNode(QVector<double> &ohlcData, QDateTime &time_state, int id, bool isDynamic, int nodewidth, int __pixelsPerPip, bool isfirst, graphTimeFrameNodeState *follow_candle_node_state)
+    : ohlcData(ohlcData), isFirst(isfirst), node_time_state(time_state), isNodeDynamic(isDynamic), node_id(id), node_width(nodewidth), pixelsPerPip(__pixelsPerPip), followCandleNodeState(follow_candle_node_state)
 {
     // create the internal state of the node
     setScale();
@@ -38,6 +38,11 @@ graphTimeFrameNode::~graphTimeFrameNode()
 graphTimeFrameNodeState *graphTimeFrameNode::getgraphTimeFrameNodeState()
 {
     return node_state;
+}
+
+graphTimeFrameNodeState *graphTimeFrameNode::getFollowCandleNodeState()
+{
+    return followCandleNodeState;
 }
 
 pathGraphPoint *graphTimeFrameNode::getPathGraphPoint() const {
@@ -188,6 +193,8 @@ void graphTimeFrameNode::initializeState(){
 
         // set the current candlestick body location
         node_state->setCurCandleStickBodyLocation(QPoint(node_width / 2, bodyLength / 2));
+
+        node_state->isfirst = isFirst;
     }else {
         // Dynamic case: set all OHLC values to the open value
         double openValue = ohlcData[0];
@@ -215,6 +222,8 @@ void graphTimeFrameNode::initializeState(){
         node_state->setPrevCandleStickBodyLength(0);
         node_state->setCurCandleStickWickLength(0);
         node_state->setPrevCandleStickWickLength(0);
+
+        node_state->isfirst = isFirst;
     }
     setIsStateInitialized(true); // Moved outside the if-else block
 }

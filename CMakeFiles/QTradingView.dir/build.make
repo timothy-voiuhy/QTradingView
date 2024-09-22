@@ -307,22 +307,13 @@ QTradingView: CMakeFiles/QTradingView.dir/dbManager.cpp.o
 QTradingView: CMakeFiles/QTradingView.dir/GraphingView.cpp.o
 QTradingView: CMakeFiles/QTradingView.dir/graphWindow.cpp.o
 QTradingView: CMakeFiles/QTradingView.dir/build.make
-QTradingView: /usr/lib/x86_64-linux-gnu/libQt6WebEngineWidgets.so.6.4.2
+QTradingView: /usr/lib/x86_64-linux-gnu/libQt6Widgets.so.6.6.2
+QTradingView: /usr/lib/x86_64-linux-gnu/libQt6Network.so.6.6.2
 QTradingView: lib/QScintilla/src/libqscintilla2_qt6.so.15.2
-QTradingView: /usr/lib/x86_64-linux-gnu/libQt6WebEngineCore.so.6.4.2
-QTradingView: /usr/lib/x86_64-linux-gnu/libQt6Quick.so.6.4.2
-QTradingView: /usr/lib/x86_64-linux-gnu/libQt6QmlModels.so.6.4.2
-QTradingView: /usr/lib/x86_64-linux-gnu/libQt6OpenGL.so.6.4.2
-QTradingView: /usr/lib/x86_64-linux-gnu/libQt6WebChannel.so.6.4.2
-QTradingView: /usr/lib/x86_64-linux-gnu/libQt6Qml.so.6.4.2
-QTradingView: /usr/lib/x86_64-linux-gnu/libQt6Network.so.6.4.2
-QTradingView: /usr/lib/x86_64-linux-gnu/libQt6Positioning.so.6.4.2
-QTradingView: /usr/lib/x86_64-linux-gnu/libQt6PrintSupport.so.6.4.2
-QTradingView: /usr/lib/x86_64-linux-gnu/libQt6Widgets.so.6.4.2
-QTradingView: /usr/lib/x86_64-linux-gnu/libQt6Gui.so.6.4.2
-QTradingView: /usr/lib/x86_64-linux-gnu/libQt6Core.so.6.4.2
+QTradingView: /usr/lib/x86_64-linux-gnu/libQt6Gui.so.6.6.2
 QTradingView: /usr/lib/x86_64-linux-gnu/libGLX.so
 QTradingView: /usr/lib/x86_64-linux-gnu/libOpenGL.so
+QTradingView: /usr/lib/x86_64-linux-gnu/libQt6Core.so.6.6.2
 QTradingView: CMakeFiles/QTradingView.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/media/program/data_drive/MYAPPLICATIONS/QTradingView/CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Linking CXX executable QTradingView"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/QTradingView.dir/link.txt --verbose=$(VERBOSE)

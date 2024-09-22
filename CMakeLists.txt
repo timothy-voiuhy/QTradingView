@@ -10,7 +10,7 @@ set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
 find_package(QT NAMES Qt6 REQUIRED COMPONENTS Widgets Core Network)
-find_package(Qt${QT_VERSION_MAJOR} REQUIRED COMPONENTS Widgets Core Network WebEngineWidgets)
+find_package(Qt${QT_VERSION_MAJOR} REQUIRED COMPONENTS Widgets Core Network)
 find_package(Qt6WebSockets REQUIRED)
 find_package(Qt6Sql REQUIRED)
 # set(QSCINTILLA_INCLUDE_DIR "/usr/include/x86_64-linux-gnu/Qsci/")
@@ -73,7 +73,7 @@ target_link_directories(QTradingView PRIVATE ${QSCINTILLA_INCLUDE_DIR})
 
 target_link_libraries(QTradingView PRIVATE Qt6WebSockets)
 target_link_libraries(QTradingView PRIVATE Qt6Sql)
-target_link_libraries(QTradingView PRIVATE Qt${QT_VERSION_MAJOR}::Widgets Qt${QT_VERSN_MAJOR}::Core Qt6::Network Qt6::WebEngineWidgets)
+target_link_libraries(QTradingView PRIVATE Qt${QT_VERSION_MAJOR}::Widgets Qt${QT_VERSN_MAJOR}::Core Qt6::Network)
 target_link_libraries(QTradingView PRIVATE ${QSCINTILLA_LIBRARY})
 # target_link_libraries(QTradingView PRIVATE ${MYSQL_DRIVER})
 

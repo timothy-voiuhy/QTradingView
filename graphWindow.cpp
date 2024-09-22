@@ -14,7 +14,7 @@ GraphWindow::GraphWindow(QWidget *parent)
     : QMainWindow(parent)
 {
     // Create the scene and view
-    GraphingScene = new Graph(4, "EURUSD_D1");
+    GraphingScene = new Graph(1, "EURUSD_D1");
     graphingView = new GraphingView(this);
     graphingView->setScene(GraphingScene);
     setupUi();

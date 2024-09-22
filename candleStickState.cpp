@@ -226,3 +226,10 @@ QDateTime graphTimeFrameNodeState::getCandleDateTime()
 {
     return timeState;
 }
+bool graphTimeFrameNodeState::isBull(){
+    if(getHigh() > getOpen()){
+        return true;
+    }else{
+        return false;
+    }
+}

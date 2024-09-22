@@ -23,21 +23,24 @@ class graphTimeFrameNode :public QGraphicsItemGroup{
 
 
     public:
-        explicit graphTimeFrameNode(QVector<double> &ohlcData, QDateTime &time_state, int id, bool isDynamic, int nodewidth, int __pixelsPerPip);
+        explicit graphTimeFrameNode(QVector<double> &ohlcData, QDateTime &time_state, int id, bool isDynamic, int nodewidth, int __pixelsPerPip, bool isfirst, graphTimeFrameNodeState *prev_candle_node_state);
         ~graphTimeFrameNode();
 
         // group items
         // candle *candle_stick;
+        graphTimeFrameNodeState *followCandleNodeState;
         pathGraphPoint *path_graph_point;
         QRectF bounding_rect;
         candleBody *candle_stick_body;
         candleStickWick *candle_stick_wick;
         graphTimeFrameNodeState *getgraphTimeFrameNodeState();
+        graphTimeFrameNodeState *getFollowCandleNodeState();
         pathGraphPoint *getPathGraphPoint() const;
         QRectF boundingRect() const override;
         QVector<double> ohlcData;
         QDateTime node_time_state;
         QPointF valueToPosition(double value);
+        bool isFirst;
         int node_id;
         bool isNodeDynamic;
         double range;
